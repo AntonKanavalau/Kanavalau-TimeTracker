@@ -6,13 +6,25 @@
     <title>TimeTracker</title>
   </head>
   <body>
-    <main class="index-container">
-        <h1><span>time tracker</span> <br> for you and your tasks </h1>
-        <form action="#">
-          <label></label>
-          <input type="email" id="email" name="email" value="Enter you e-Mail"> <br>
-          <input type="email" id="password" name="password" value="Enter you Password">
-        </form>
+    <main>
+      <h1><span>time tracker</span> <br> for you and your tasks </h1>
+      <form action="#">
+        <input class="data" type="email" id="email" name="email"
+               autocomplete="current-password" placeholder="Enter you e-Mail" required>
+        <br>
+        <input class="data" type="password" id="pwd" name="pwd"
+               autocomplete="current-password" placeholder="Enter you Password" required>
+        <br>
+        <a class="retrieve" href="#" title="Retrieve password">forgot password</a>
+        <br>
+        <input type="checkbox">
+        <label>We use cookies to provide you better user experience. By checking this you agree to use our web-site.
+          Learn more in our <a href="#" title="Privacy policy">Privacy policy</a>
+        </label>
+        <br>
+        <button name="Login">Login</button>
+        <p><a href="#" class="login">Create account</a> or sign in with <a href="#" class="login">Google</a></p>
+      </form>
     </main>
   </body>
 </html>
