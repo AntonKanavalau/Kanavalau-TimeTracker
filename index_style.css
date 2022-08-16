@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&family=Open+Sans&family=Oswald:wght@300&display=swap');
+
+body {
+    background: #f0f3f8 url("images/index_img.svg") 15vh 15vh fixed no-repeat;
+    background-size: 40em;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+.index-container {
+
+}
+
+h1 {
+    line-height: 1.2em;
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+    color: #000;
+}
+
+h1 > span {
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
