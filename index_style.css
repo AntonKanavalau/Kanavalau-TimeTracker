@@ -1,66 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&family=Open+Sans&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap');
 
 body {
-    background: #f0f3f8 url("images/index_img.svg") 15vh 15vh fixed no-repeat;
-    background-size: 40em;
+    background: #f0f3f8 url("images/index_img.svg") 20vh 14vh fixed no-repeat;
+    background-size: 30%;
     font-family: 'Manrope', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Oswald', sans-serif;
 }
-
+/*block position & size*/
 main {
-    display: block;
-    position: relative;
+    width: 400px;
+    position: absolute;
     text-align: center;
+    top: 16vh;
+    right: 45vh;
 }
 
+/*Title style*/
 h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: normal;
     line-height: 1.2em;
     color: #000;
 }
 
 h1 > span {
-    letter-spacing: 0.1em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+/*Email & password style*/
 input.data {
-    width: 20rem;
+    box-sizing: border-box;
+    width: 100%;
     color: #a1a1a1;
     border: 1px solid rgb(227, 230, 232);
     border-radius: 40px;
     font-size: 1.2rem;
     padding: 1rem;
-    margin: 1.1rem;
+    margin: 1.1rem auto;
     text-align: center;
     background: rgb(255, 255, 255);
 }
+.input.data:hover  {
+    border: none;
+}
 
+/*block checkbox style*/
+.cookies {
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.cookies > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cookies > label {
+    padding-left: 25px;
+}
+
+/*LOGIN button*/
 button {
     background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
-    box-shadow: 0px 2px 2px rgba(68, 68, 68, 0.51);
+    box-shadow: 0 2px 2px rgba(68, 68, 68, 0.51);
+    border: none;
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 0.5rem;
+    padding: 0.65rem;
     width: 10rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     text-align: center;
-}
-
-.retrieve {
-    color: rgb(33, 150, 243);
     cursor: pointer;
-    font-size: 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
 }
 
-.login {
+/*create account*/
+.add-acc {
     color: inherit;
     cursor: pointer;
     font-size: 1rem;
@@ -68,3 +87,13 @@ button {
     text-decoration: underline;
     text-transform: uppercase;
 }
+
+/**/
+.retrieve {
+     color: rgb(33, 150, 243);
+     cursor: pointer;
+     font-size: 0.9rem;
+     text-decoration: none;
+     text-transform: uppercase;
+     text-align: center;
+ }
