@@ -81,6 +81,7 @@ button {
     color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 0.65rem;
+    margin-top: 2rem;
     width: 10rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
