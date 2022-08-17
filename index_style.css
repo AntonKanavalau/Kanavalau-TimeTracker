@@ -5,13 +5,20 @@ body {
     background-size: 30%;
     font-family: 'Manrope', sans-serif;
 }
+
+@media screen and (max-width: 1300px) {
+    body {
+        background-image: none;
+    }
+}
+
 /*block position & size*/
 main {
     width: 400px;
     position: absolute;
     text-align: center;
-    top: 16vh;
-    right: 45vh;
+    top: 16%;
+    right: 25%;
 }
 
 /*Title style*/
@@ -41,8 +48,10 @@ input.data {
     text-align: center;
     background: rgb(255, 255, 255);
 }
-.input.data:hover  {
-    border: none;
+
+input.data:focus {
+    outline: none;
+    border: 1px solid rgb(227, 230, 232);
 }
 
 /*block checkbox style*/
@@ -61,6 +70,7 @@ input.data {
 
 .cookies > label {
     padding-left: 25px;
+    font-size: 0.9rem;
 }
 
 /*LOGIN button*/
@@ -88,12 +98,12 @@ button {
     text-transform: uppercase;
 }
 
-/**/
+/*Forgot password*/
 .retrieve {
-     color: rgb(33, 150, 243);
-     cursor: pointer;
-     font-size: 0.9rem;
-     text-decoration: none;
-     text-transform: uppercase;
-     text-align: center;
- }
+    color: rgb(33, 150, 243);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
