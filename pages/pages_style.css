@@ -1,16 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap');
 
-body {
+* {
     margin: 0;
+    padding: 0;
+}
+
+body {
     background: #f0f4f8;
     font-family: 'Manrope', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+ul {
+    list-style: none;
+}
+
 .home-nav {
-    width: 256px;
+    width: 16rem;
     height: 100vh;
     position: fixed;
     z-index: 100;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 4px 18px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.18) 0 4px 18px;
+}
+
+.nav-profile_block {
+    height: 7.75rem;
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-profile_block:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-login {
+    margin: 0;
+}
+
+.icon-correction {
+    font-size: 3rem;
+}
+
+.nav_list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.nav-profile_link {
+    height: 7.75rem;
+}
+
+a:hover {
+    color: #2194f3;
+    transition: all 0.3s ease 0s;
 }
