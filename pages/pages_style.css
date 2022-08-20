@@ -25,6 +25,12 @@ ul {
     color: #a9a9b2;
     transition: all 0.3s ease 0s;
 }
+
+button {
+    outline: none;
+    background: transparent;
+}
+
 /*NAV block style*/
 .home-nav {
     width: 16rem;
@@ -112,6 +118,8 @@ main.home {
 
 /*Header block*/
 header {
+    display: inline-flex;
+    align-items: center;
     position: fixed;
     z-index: 99;
     height: 4rem;
@@ -122,5 +130,9 @@ header {
 }
 
 .Button_base {
-    
+    border: 0;
+    position: relative;
+    border-radius: 0;
+    vertical-align: middle;
+    cursor: pointer;
 }
