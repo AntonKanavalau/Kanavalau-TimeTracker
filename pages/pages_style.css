@@ -20,6 +20,12 @@ ul {
     list-style: none;
 }
 
+.material-icons {
+    display: inline-block;
+    color: #a9a9b2;
+    transition: all 0.3s ease 0s;
+}
+/*NAV block style*/
 .home-nav {
     width: 16rem;
     height: 100vh;
@@ -29,12 +35,16 @@ ul {
     box-shadow: rgba(0, 0, 0, 0.18) 0 4px 18px;
 }
 
+/*Profile block*/
 .nav-profile_block {
     height: 7.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 10px;
     background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
     text-align: center;
-    color: white;
+    color: #fff;
     transition: all 0.3s ease 0s;
 }
 
@@ -43,14 +53,17 @@ ul {
     transition: all 0.3s ease 0s;
 }
 
+.nav-icon-correction {
+    font-size: 4rem;
+    color: #fff;
+}
+
 .nav-login {
     margin: 0;
+    font-size: 1.1rem;
 }
 
-.icon-correction {
-    font-size: 3rem;
-}
-
+/*Site navigation*/
 .nav_list {
     width: 100%;
     box-sizing: border-box;
@@ -58,11 +71,56 @@ ul {
     display: inline-block;
 }
 
-.nav-profile_link {
-    height: 7.75rem;
+.nav_list > li {
+    font-weight: 400;
+    padding: 0.7rem 0;
 }
 
-a:hover {
+li:first-child {
+    line-height: 3rem;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.nav_list > li:hover a{
     color: #2194f3;
     transition: all 0.3s ease 0s;
+}
+
+.nav_list > li:hover i{
+    color: #2194f3;
+    transition: all 0.3s ease 0s;
+}
+
+/*Link navigation*/
+a.nav_link {
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    color: #2194f3;
+}
+
+a.nav_link > i {
+    padding-right: 1rem;
+}
+
+main.home {
+    height: 100vh;
+    margin-left: 256px;
+}
+
+/*Header block*/
+header {
+    position: fixed;
+    z-index: 99;
+    height: 4rem;
+    width: 100%;
+    background: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
+}
+
+.Button_base {
+    
 }
