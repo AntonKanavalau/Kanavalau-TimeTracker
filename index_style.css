@@ -87,6 +87,11 @@ button {
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease 0s;
 }
 
 /*create account*/

@@ -69,12 +69,19 @@ button {
     font-size: 1.1rem;
 }
 
-/*Site navigation*/
+/*Site navigation list*/
+.nav-block {
+    height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
 .nav_list {
     width: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
-    display: inline-block;
 }
 
 .nav_list > li {
@@ -111,6 +118,26 @@ a.nav_link > i {
     padding-right: 1rem;
 }
 
+button.log-out {
+    background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
+    box-shadow: 0 2px 2px rgba(68, 68, 68, 0.51);
+    border-radius: 20px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 0.65rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 10rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button.log-out:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease 0s;
+}
+
 main.home {
     height: 100vh;
     margin-left: 256px;
@@ -118,15 +145,21 @@ main.home {
 
 /*Header block*/
 header {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    position: fixed;
+    justify-content: space-between;
     z-index: 99;
-    height: 4rem;
-    width: 100%;
+    box-sizing: content-box;
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
     padding: 0 20px;
+    height: 4rem;
+}
+
+header > * {
+    display: flex;
+    align-items: center;
+
 }
 
 .Button_base {
@@ -135,4 +168,18 @@ header {
     border-radius: 0;
     vertical-align: middle;
     cursor: pointer;
+}
+
+/*Project Name style*/
+.projectName {
+    font-weight: bold;
+}
+
+/*Play tracker button*/
+.play-time {
+    margin-left: 1rem;
+}
+
+.play-time: {
+    color: rgb(255, 95, 95);
 }

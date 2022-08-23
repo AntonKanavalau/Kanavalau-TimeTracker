@@ -17,16 +17,28 @@
           <p class="nav-login" title="login@mail.ru">login@mail.ru</p>
         </section>
       </a>
+      <section class="nav-block">
       <ul class="nav_list">
         <li><a class="nav_link active" href="home.html" title="Tracker"><i class="material-icons active">timer</i>Tracker</a></li>
         <li><a class="nav_link" href="projects.html" title="Projects"><i class="material-icons">apps</i>Projects</a></li>
         <li><a class="nav_link" href="customers.html" title="Customers"><i class="material-icons">perm_identity</i>Customers</a></li>
         <li><a class="nav_link" href="team.html" title="Team"><i class="material-icons">people</i>Team</a></li>
       </ul>
+      <button type="submit" class="log-out" onclick="location.href='../index.html'" name="Log out">Log out</button>
+      </section>
     </nav>
     <main class="home">
       <header>
-        <button class="Button_base" type="button"><i class="material-icons">more_vert</i></button>
+        <section class="header_task_settings">
+          <button class="Button_base" type="button"><i class="material-icons">more_vert</i></button>
+          <p class="header_taskName">taskName</p>
+        </section>
+        <p class="projectName">projectName</p>
+        <section class="header_time">
+          <p class="time" title="00:00:00">00:00:00</p>
+          <button class="Button_base play-time" id="play_btn"
+                  type="button"><i class="material-icons">play_circle_outline</i></button>
+        </section>
       </header>
     </main>
   </body>
