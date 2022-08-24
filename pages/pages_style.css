@@ -189,7 +189,7 @@ header > * {
 /*ALL time block*/
 .tracker_container {
     height: 35vh;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
 }
 
@@ -199,12 +199,12 @@ header > * {
 
 /*Total time block*/
 .total-time_block {
-    width: 50%;
-    font-size: 2rem;
+    width: 60%;
+    font-size: 2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 3;
+
 }
 
 .total-time_title {
@@ -217,18 +217,82 @@ header > * {
 .project_block {
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     flex-direction: column;
-    font-weight: 600;
+    /*font-weight: 600;*/
     text-transform: uppercase;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .project_block > li {
     padding: 1rem 0;
     border-bottom: 1px solid #bbb;
+    list-style-position: inside;
+    transition: all 0.3s ease 0s;
+}
+
+.project_time {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 1rem 0;
+    border-bottom: 1px solid #bbb;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.project_time:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease 0s;
+}
+
+.project_title {
+    font-weight: 600;
+}
+
+.project_title:before {
+    content: "\e5df";
+    font-family: 'Material Icons';
+    color: #009a00;
 }
 
 .task_block {
     display: none;
+    flex-direction: column;
+    padding: 0.5rem 0;
 }
+
+.task_block > .task {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    margin-left: 1rem;
+    border-bottom: 1px solid #f0f4f8;
+    background: rgba(0, 0, 0, 0.05);
+}
+.task > * {
+    display: flex;
+}
+
+/*
+.project_block > li::marker {
+    content: "arrow_right";
+    font-family: 'Material Icons';
+    color: #009a00;
+}
+
+.project_block > li:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease 0s;
+}
+
+.project_block > li:hover > ul.task_block {
+    display: flex;
+
+}
+
+.task_block {
+    display: flex;
+    flex-direction: column;
+}
+*/
+
