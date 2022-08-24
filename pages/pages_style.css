@@ -214,7 +214,7 @@ header > * {
 }
 
 /*Total time project and task*/
-.project_block {
+.project_container {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem 2rem 1rem;
@@ -224,7 +224,7 @@ header > * {
     overflow-y: auto;
 }
 
-.project_block > li {
+.project_container > li {
     padding: 1rem 0;
     border-bottom: 1px solid #bbb;
     list-style-position: inside;
@@ -243,6 +243,10 @@ header > * {
 .project_time:hover {
     background: rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease 0s;
+}
+
+section.project_time:hover ~ div.task_block {
+    display: block;
 }
 
 .project_title {
@@ -269,30 +273,8 @@ header > * {
     border-bottom: 1px solid #f0f4f8;
     background: rgba(0, 0, 0, 0.05);
 }
+
 .task > * {
     display: flex;
 }
-
-/*
-.project_block > li::marker {
-    content: "arrow_right";
-    font-family: 'Material Icons';
-    color: #009a00;
-}
-
-.project_block > li:hover {
-    background: rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease 0s;
-}
-
-.project_block > li:hover > ul.task_block {
-    display: flex;
-
-}
-
-.task_block {
-    display: flex;
-    flex-direction: column;
-}
-*/
 
