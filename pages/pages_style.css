@@ -119,6 +119,7 @@ a.nav_link > i {
     padding-right: 1rem;
 }
 
+/*Log out button*/
 button.log-out {
     background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
     box-shadow: 0 2px 2px rgba(68, 68, 68, 0.51);
@@ -146,7 +147,7 @@ main.home {
 }
 
 /*Header block*/
-header {
+main > header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -182,10 +183,6 @@ header > * {
     margin-left: 1rem;
 }
 
-/*.play-time:active {
-    color: rgb(255, 95, 95);
-}*/
-
 /*ALL time block*/
 .tracker_container {
     height: 35vh;
@@ -204,7 +201,6 @@ header > * {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .total-time_title {
@@ -214,7 +210,7 @@ header > * {
 }
 
 /*Total time project and task*/
-.project_container {
+div.timeProject_container {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem 2rem 1rem;
@@ -224,14 +220,15 @@ header > * {
     overflow-y: auto;
 }
 
-.project_container > li {
+div.timeProject_container > li {
     padding: 1rem 0;
     border-bottom: 1px solid #bbb;
     list-style-position: inside;
     transition: all 0.3s ease 0s;
 }
 
-.project_time {
+/*Block TOTAL time*/
+section.project_time {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem 1rem 0;
@@ -240,7 +237,7 @@ header > * {
     transition: all 0.3s ease 0s;
 }
 
-.project_time:hover {
+section.project_time:hover {
     background: rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease 0s;
 }
@@ -249,16 +246,18 @@ section.project_time:hover ~ div.task_block {
     display: block;
 }
 
-.project_title {
+/*Project list*/
+p.project_title {
     font-weight: 600;
 }
 
-.project_title:before {
+p.project_title:before {
     content: "\e5df";
     font-family: 'Material Icons';
     color: #009a00;
 }
 
+/*Task list*/
 .task_block {
     display: none;
     flex-direction: column;
@@ -278,3 +277,18 @@ section.project_time:hover ~ div.task_block {
     display: flex;
 }
 
+/*Project dashboard block*/
+div.project_block {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
+    margin: 0 1.5rem;
+}
+
+.project_block_header {
+
+}
