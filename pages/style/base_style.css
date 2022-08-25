@@ -12,6 +12,11 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+main {
+    height: 100vh;
+    margin-left: 16rem;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -140,9 +145,4 @@ button.log-out {
 button.log-out:hover {
     opacity: 0.7;
     transition: all 0.3s ease 0s;
-}
-
-main {
-    height: 100vh;
-    margin-left: 16rem;
 }
