@@ -213,10 +213,8 @@ header > * {
 div.timeProject_container {
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 1rem 2rem;
     flex-direction: column;
-    /*font-weight: 600;*/
-    text-transform: uppercase;
     overflow-y: auto;
 }
 
@@ -249,6 +247,7 @@ section.project_time:hover ~ div.task_block {
 /*Project list*/
 p.project_title {
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 p.project_title:before {
@@ -280,15 +279,48 @@ p.project_title:before {
 /*Project dashboard block*/
 div.project_block {
     height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.1rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    padding: 0 20px;
-    margin: 0 1.5rem;
+    border: 1px solid #e3e6e8ff;
+    border-radius: 5px;
+    overflow-y: auto;
 }
 
 .project_block_header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.15rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #bbb;;
+}
 
+.dashboard_projects {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+}
+
+section.project_block_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.newProject_add {
+    color: #2195f2;
+    padding-right: 1.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+.newProject_add:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
