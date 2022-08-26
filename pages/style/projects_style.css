@@ -1,5 +1,6 @@
 .container {
     padding: 1.5rem;
+    height: 100vh;
 }
 
 .projects-list_container {
@@ -30,3 +31,75 @@
     opacity: 0.6;
     transition: all 0.3s ease 0s;
 }
+
+/*Table list projects*/
+
+.list_table {
+    padding: 0 1rem;
+}
+
+.table-head {
+    height: 4rem;
+    position: sticky;
+}
+
+.table-head_column{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #2195f2;
+    text-align: left;
+}
+
+.color_block {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #fd171f;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list_block {
+    height: 2rem;
+}
+
+/*.projects_table {
+    padding: 1rem;
+}
+.table_head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #2195f2;
+}
+
+.id, .numer{
+    flex-grow: 1;
+}
+
+.name, .nameProject{
+    flex-grow: 2;
+}
+
+.color {
+    flex-grow: 1;
+}
+
+.company, .customer {
+    flex-grow: 3;
+}
+
+.team {
+    flex-grow: 2;
+}
+
+.list_block {
+    display: flex;
+    justify-content: space-between;
+}
+.color_block {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #fd171f;
+    cursor: pointer;
+}*/
