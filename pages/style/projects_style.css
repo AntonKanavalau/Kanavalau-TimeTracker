@@ -16,7 +16,7 @@
     border-radius: 5px
 }
 
-.header_taskName {
+.correct {
     font-size: 2rem;
     font-weight: bold;
 }
@@ -69,13 +69,37 @@
     flex-direction: column;
 }
 
-.table2 {
+.block {
     display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.table  table {
+    width:100%;
+    table-layout: fixed;
+}
+
+.scroll {
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+}
+
+.projects-list_table {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    overflow-y: auto;
+}
+
+.projects-list_table2 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.id {
+    width: 3rem;
 }
 
 /*.projects_table {

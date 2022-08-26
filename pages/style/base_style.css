@@ -39,8 +39,8 @@ button {
 }
 
 table {
+    margin: auto;
     border-collapse: collapse;
-    overflow-y: auto;
 }
 
 thead {
