@@ -1,6 +1,7 @@
 .container {
     padding: 1.5rem;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .projects-list_container {
@@ -12,7 +13,7 @@
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e3e6e8ff;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .header_taskName {
@@ -36,6 +37,7 @@
 
 .list_table {
     padding: 0 1rem;
+    overflow-y: auto;
 }
 
 .table-head {
@@ -60,6 +62,20 @@
 
 .list_block {
     height: 2rem;
+}
+
+.sticky {
+    display: flex;
+    flex-direction: column;
+}
+
+.table2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 /*.projects_table {
