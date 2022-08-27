@@ -1,5 +1,5 @@
 @import "base_style.css";
-@import "projects_style.css";
+
 
 /*Header block*/
 main > header {
@@ -183,3 +183,4 @@ section.project_block_container {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+
