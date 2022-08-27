@@ -1,23 +1,20 @@
 @import "base_style.css";
 
-
 /*Header block*/
-main > header {
+.content_block > header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 99;
     box-sizing: content-box;
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
     padding: 0 20px;
-    height: 4rem;
+    height: 6rem;
 }
 
 header > * {
     display: flex;
     align-items: center;
-
 }
 
 .Button_base {
@@ -131,19 +128,28 @@ p.project_title:before {
     display: flex;
 }
 
-/*Project dashboard block*/
-div.project_block {
+/*Block dashboard*/
+.dashboard_block {
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+/*Project dashboard block*/
+.project_block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-sizing: border-box;
     padding: 1.1rem;
-    margin: 0 1.5rem 1.5rem 1.5rem;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e3e6e8ff;
     border-radius: 5px;
 }
+
 /*Header dashboard*/
 .project_block_header {
     display: flex;

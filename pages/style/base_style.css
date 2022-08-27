@@ -17,6 +17,18 @@ main {
     margin-left: 16rem;
 }
 
+/*MAIN block*/
+.content_block {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -163,12 +175,6 @@ button.log-out:hover {
 }
 
 /*Style white block 100% size*/
-.container {
-    padding: 1.5rem;
-    height: 100vh;
-    box-sizing: border-box;
-}
-
 /*header block*/
 .projects-list_container {
     display: flex;
