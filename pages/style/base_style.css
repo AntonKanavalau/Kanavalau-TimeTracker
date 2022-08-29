@@ -250,3 +250,15 @@ table {
 .id {
     width: 2rem;
 }
+
+@media screen and (max-width: 1020px) {
+    .home-nav {
+        width: 11rem;
+    }
+    main {
+        margin-left: 11rem;
+    }
+    button.log-out {
+        width: 8rem;
+    }
+}
