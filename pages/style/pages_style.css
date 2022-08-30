@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: content-box;
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
     padding: 0 20px;
@@ -15,6 +14,12 @@
 header > * {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 670px) {
+    .content_block > header {
+        height: 4rem;
+    }
 }
 
 .Button_base {
@@ -42,6 +47,13 @@ header > * {
     display: flex;
 }
 
+@media screen and (max-width: 670px) {
+    .tracker_container {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+}
+
 .tracker_container > * {
     display: flex;
 }
@@ -55,7 +67,19 @@ header > * {
     justify-content: center;
 }
 
+@media screen and (max-width: 670px) {
+    .total-time_block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        width: auto;
+        font-size: 1.5rem;
+    }
+}
+
 .total-time_title {
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     margin-bottom: 0.5rem;
@@ -137,6 +161,13 @@ p.project_title:before {
     padding: 1.5rem;
 }
 
+@media screen and (max-width: 670px) {
+    .dashboard_block {
+        padding: 0.5rem;
+    }
+}
+
+
 /*Project dashboard block*/
 .project_block {
     display: flex;
@@ -182,6 +213,12 @@ section.project_block_container {
     color: #2195f2;
     padding-right: 1.5rem;
     transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 770px) {
+    .newProject_add {
+        text-align: right;
+    }
 }
 
 .newProject_add:hover {
