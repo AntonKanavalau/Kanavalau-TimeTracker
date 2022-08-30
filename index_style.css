@@ -24,13 +24,11 @@ main {
     body {
         background-image: none;
     }
-
     main {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .content_block {
         width: 60%;
         top: auto;

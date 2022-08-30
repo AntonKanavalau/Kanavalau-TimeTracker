@@ -6,7 +6,7 @@
     }
 }
 
-/*base setings*/
+/*base settings*/
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +81,6 @@ td {
     height: 4rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 /*NAV block style*/
 .home-nav {
@@ -241,11 +240,6 @@ button.log-out {
     transition: all 0.3s ease 0s;
 }
 
-/*button > .logout {
-    display: none;
-    color: white;
-}*/
-
 @media screen and (min-width: 670px) {
     .logout {
         display: none;
@@ -264,7 +258,7 @@ button.log-out:hover {
 }
 
 @media screen and (max-width: 670px) {
-    button.log-out{
+    button.log-out {
         width: 100%;
     }
     button > span {
@@ -331,7 +325,6 @@ table {
     text-transform: uppercase;
     color: #2195f2;
     text-align: left;
-
 }
 
 .projects_list:hover {
