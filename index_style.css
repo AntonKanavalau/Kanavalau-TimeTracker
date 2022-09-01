@@ -24,11 +24,13 @@ main {
     body {
         background-image: none;
     }
+
     main {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .content_block {
         width: 60%;
         top: auto;
@@ -55,22 +57,27 @@ input.data {
     box-sizing: border-box;
     width: 100%;
     color: #5d5d5d;
-    border: 1px solid rgb(227, 230, 232);
+    border: 1px solid #e3e6e8ff;
     border-radius: 40px;
     font-size: 1.2rem;
     padding: 1rem;
     margin: 1.1rem auto;
     text-align: center;
-    background: rgb(255, 255, 255);
+    background: #fff;
 }
 
 input.data:focus {
     outline: none;
-    border: 1px solid rgb(227, 230, 232);
+    border: 1px solid #e3e6e8ff;
 }
 
-input.data::-moz-placeholder { color: #c5c5c5; }
-input.data::-webkit-input-placeholder { color: #c5c5c5; }
+input.data::-moz-placeholder {
+    color: #c5c5c5;
+}
+
+input.data::-webkit-input-placeholder {
+    color: #c5c5c5;
+}
 
 /*block checkbox style*/
 .cookies {

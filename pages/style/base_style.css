@@ -31,7 +31,7 @@ main {
 
 @media screen and (max-width: 670px) {
     main {
-        margin-left: 4rem;
+        margin-left: 3rem;
     }
 }
 
@@ -100,7 +100,7 @@ td {
 
 @media screen and (max-width: 670px) {
     .home-nav {
-        width: 4rem;
+        width: 3rem;
     }
 }
 
@@ -166,6 +166,7 @@ td {
     .nav-block {
         padding: 5px;
     }
+
     .nav-block > * {
         display: flex;
         flex-direction: column;
@@ -261,9 +262,11 @@ button.log-out:hover {
     button.log-out {
         width: 100%;
     }
+
     button > span {
         display: none;
     }
+
     .logout {
         color: white;
     }

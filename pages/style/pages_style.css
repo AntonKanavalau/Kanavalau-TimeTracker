@@ -7,8 +7,14 @@
     justify-content: space-between;
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-    padding: 0 20px;
+    padding: 0 1.25rem;
     height: 6rem;
+}
+
+@media screen and (max-width: 670px) {
+    .content_block > header {
+        padding: 0.5rem;
+    }
 }
 
 header > * {
@@ -194,12 +200,13 @@ p.project_title:before {
 .form_block {
     width: 40vw;
     max-width: 30rem;
+    min-width: 250px;
     display: flex;
     max-height: calc(100% - 4rem);
     flex-direction: column;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 11px 15px -7px rgba(0,0,0,0.2),0 24px 38px 3px rgba(0,0,0,0.14),0 9px 46px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
 
 .title {
@@ -212,10 +219,41 @@ p.project_title:before {
     box-sizing: border-box;
     border-radius: 4px;
     background: #e8e8e8;
+    letter-spacing: 0.1rem;
 }
 
 .form {
+    padding: 0.5rem 3rem;
+    text-align: right;
+}
 
+input.data {
+    box-sizing: border-box;
+    width: 100%;
+    color: #5d5d5d;
+    border: 1px solid #e3e6e8ff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    background: #fff;
+}
+
+input.data:focus {
+    outline: none;
+    border: 1px solid #e3e6e8ff;
+}
+
+.decline, .create {
+    text-transform: uppercase;
+    color: #adadad;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.create {
+    color: #2195f2;;
 }
 
 /*
