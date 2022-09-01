@@ -180,6 +180,54 @@ p.project_title:before {
     border-radius: 5px;
 }
 
+/*ADD project*/
+.add_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 900;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form_block {
+    width: 40vw;
+    max-width: 30rem;
+    display: flex;
+    max-height: calc(100% - 4rem);
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,0.2),0 24px 38px 3px rgba(0,0,0,0.14),0 9px 46px 8px rgba(0,0,0,0.12);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    height: 3rem;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #e8e8e8;
+}
+
+.form {
+
+}
+
+/*
+.black {
+    position: fixed;
+    z-index: -1;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+}*/
+
 /*Header dashboard*/
 .project_block_header {
     display: flex;
