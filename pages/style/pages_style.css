@@ -319,6 +319,7 @@ section.project_block_container {
 }
 
 /*Profile page*/
+/*Avatar style*/
 .icon_correction {
     font-size: 6rem;
     margin-right: 2rem;
@@ -331,6 +332,8 @@ section.project_block_container {
     transition: all 0.3s ease 0s;
 }
 
+?
+/*Login style*/
 .correct {
     font-size: 1.5rem;
     font-weight: normal;
@@ -343,5 +346,17 @@ button.correct:hover {
 .correct_block {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.block_form {
+    
+}
+
+/*Forgot password*/
+.retrieve {
+    color: rgb(33, 150, 243);
+    cursor: pointer;
+    text-transform: uppercase;
 }
 

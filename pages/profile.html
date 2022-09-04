@@ -33,15 +33,34 @@
       </section>
     </nav>
     <main>
-    <div class="content_block container">
-      <div class="projects-list_container">
-        <header class="project_block_header correct_block">
-          <button type="submit" class="add_avatar" name="Change avatar">
-            <i class="material-icons icon_correction">account_circle</i></button>
-          <button type="submit" class="correct">login@mail.ru</button>
-        </header>
+      <div class="content_block container">
+        <div class="projects-list_container">
+          <header class="project_block_header correct_block">
+            <button type="submit" class="add_avatar" name="Change avatar">
+              <i class="material-icons icon_correction">account_circle</i></button>
+            <p class="correct">login@mail.ru</p>
+          </header>
+          <div class="block_form">
+            <form action="#">
+              <label for="name">First name: </label><br/>
+              <input id="name" type="text" placeholder="Enter First name">
+              <label for="last_name">Last name: </label><br/>
+              <input id="last_name" type="text" placeholder="Enter Last name"><br/>
+              <label for="birth">Date of Birth: </label><br/>
+              <input id="birth" type="date" placeholder="Birth data (optionl)"><br/>
+              <label for="phone">Phone </label><br/>
+              <input id="phone" type="text" placeholder="Phone (optionl)"><br/>
+              <input type="submit" value="Submit">
+              <input type="button" value="Cancel">
+            </form>
+            <section>
+              <a class="retrieve" href="#" title="Retrieve password">forgot password</a>
+            </section>
+          </div>
+
+        </div>
       </div>
-    </div>
+      </div>
     </main>
   </body>
 </html>
