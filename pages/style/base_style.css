@@ -72,6 +72,8 @@ ul {
 button {
     outline: none;
     background: transparent;
+    border: transparent;
+    cursor: pointer;
 }
 
 table {

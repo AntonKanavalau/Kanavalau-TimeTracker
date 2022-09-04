@@ -318,3 +318,8 @@ section.project_block_container {
     transition: all 0.3s ease 0s;
 }
 
+/*Profile page*/
+.icon_correction {
+    font-size: 6rem;
+}
+
