@@ -332,14 +332,16 @@ section.project_block_container {
     transition: all 0.3s ease 0s;
 }
 
-?
 /*Login style*/
 .correct {
     font-size: 1.5rem;
     font-weight: normal;
     text-transform: none;
+    cursor: pointer;
+    color: #2c2c2c;
 }
-button.correct:hover {
+
+.correct:hover {
     text-decoration: underline;
 }
 
@@ -349,8 +351,66 @@ button.correct:hover {
     margin-bottom: 1.5rem;
 }
 
+/*Forms block*/
 .block_form {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.profile_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile_form > label {
+    color: #2c2c2c;
+    padding: 0.25rem 0;
+}
+
+.profile_form > input:not(.bnt_style) {
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(117, 117, 117);
+    padding-bottom: 1.2rem;
+}
+
+.profile_form > input:focus {
+    outline: none;
+}
+
+.profile_form > input::-moz-placeholder {
+    color: rgba(145, 145, 145, 0.5);
+}
+
+.profile_form > input::-webkit-input-placeholder {
+    color: rgba(145, 145, 145, 0.5);
+}
+
+.btn_block > * {
+    margin-right: 0.5rem;
+}
+
+/*Update button*/
+.update {
+    background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
+    box-shadow: 0 2px 2px rgba(68, 68, 68, 0.51);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease 0s;
+    font-size: 1rem;
+
+}
+
+.update:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease 0s;
 }
 
 /*Forgot password*/
@@ -358,5 +418,11 @@ button.correct:hover {
     color: rgb(33, 150, 243);
     cursor: pointer;
     text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.retrieve:hover {
+    opacity: 0.6;
+    transition: all 0.3s ease 0s;
 }
 
