@@ -321,5 +321,27 @@ section.project_block_container {
 /*Profile page*/
 .icon_correction {
     font-size: 6rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.icon_correction:hover {
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+}
+
+.correct {
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: none;
+}
+button.correct:hover {
+    text-decoration: underline;
+}
+
+.correct_block {
+    display: flex;
+    justify-content: flex-start;
 }
 
