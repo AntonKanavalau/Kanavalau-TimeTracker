@@ -1,8 +1,6 @@
 /*Open windows create new projects*/
-var windowForm = document.getElementById('windowAddForm');
-var addForm = document.querySelector('.add_form');
-/*
 function openWindow() {
+  var addForm = document.querySelector('.add_form');
   if (addForm.style.display === 'none') {
     addForm.style.display = 'flex';
   } else {
@@ -11,18 +9,9 @@ function openWindow() {
 }
 
 function closeForm() {
+  var addForm = document.querySelector('.add_form');
   if (addForm.style.display === 'flex') {
       addForm.style.display = 'none';
   }
 }
-*/
-
-windowForm.addEventListener('click', function () {
-  if (addForm.style.display === 'none') {
-    addForm.style.display = 'flex';
-  } else {
-    addForm.style.display = 'none';
-  }
-});
-
 
