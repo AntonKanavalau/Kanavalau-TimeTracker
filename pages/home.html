@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
     <link href="style/pages_style.css" rel="stylesheet">
+    <script src="../script/script.js"></script>
   </head>
   <body>
     <nav class="home-nav">
@@ -79,14 +80,14 @@
           <div class="project_block">
             <header class="project_block_header">
               <p>project dashboard</p>
-              <p class="newProject_add">+ create new project</p>
+              <p class="newProject_add" id="windowAddForm" onclick="openWindow()">+ create new project</p>
             </header>
 
-           <!-- <div class="add_form">
+           <div class="add_form" style="display: none;">
               <div class="form_block">
                 <section class="title">
                   <p>creating new project</p>
-                  <i class="material-icons">close</i>
+                  <i class="material-icons close" onclick="closeForm()">close</i>
                 </section>
                 <section class="form">
                   <form action="#">
@@ -96,13 +97,13 @@
                     <label>
                       <input class="data" type="text" id="customer" name="customer" placeholder="Customer">
                     </label>
-                    <button class="Button_base decline" type="button">decline</button>
+                    <button class="Button_base decline close" type="button" onclick="closeForm()">decline</button>
                     <button class="Button_base create" type="submit">create</button>
                   </form>
                 </section>
               </div>
             </div>
-            -->
+
 
             <div class="dashboard_projects">
               <section class="project_block_container">

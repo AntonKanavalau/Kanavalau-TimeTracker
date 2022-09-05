@@ -194,7 +194,6 @@ p.project_title:before {
 
 /*ADD project*/
 .add_form {
-    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -207,8 +206,8 @@ p.project_title:before {
     width: 40vw;
     max-width: 30rem;
     min-width: 250px;
-    display: flex;
     max-height: calc(100% - 4rem);
+    display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 4px;
@@ -231,6 +230,13 @@ p.project_title:before {
 .form {
     padding: 0.5rem 3rem;
     text-align: right;
+}
+.close {
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
 }
 
 input.data {
