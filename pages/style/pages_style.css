@@ -193,7 +193,7 @@ p.project_title:before {
 }
 
 /*ADD project*/
-.add_form {
+#add_form {
     display: none;
     align-items: center;
     justify-content: center;
