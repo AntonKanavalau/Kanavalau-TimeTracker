@@ -194,12 +194,17 @@ p.project_title:before {
 
 /*ADD project*/
 .add_form {
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
     z-index: 900;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.open {
+    display: flex !important;
 }
 
 .form_block {
