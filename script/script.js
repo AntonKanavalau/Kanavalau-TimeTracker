@@ -2,9 +2,9 @@
 /*function openWindow() {
   var addForm = document.querySelector('.add_form');
   if (addForm.style.display === 'none') {
-    addForm.style.display = 'flex';
+    addForm.classList.add("open");
   } else {
-    addForm.style.display = 'none';
+    addForm.classList.remove("open");
   }
 }
 
@@ -15,22 +15,15 @@ function closeForm() {
   }
 }*/
 
-var newProjectAdd = document.getElementById("newProjectadd");
-var addForm = document.querySelector(".add_form");
+
+
+var newProjectAdd = document.getElementsByClassName(".newProject_add p");
+var addForm = document.getElementsByClassName(".add_form div");
+
+/*newProjectAdd.addEventListener('click', function () {
+  addForm.classList.add(".open");
+});*/
 
 newProjectAdd.onclick = function () {
-  addForm.classList.add("open");
-}
-
-/*
-var newProjectAdd = document.querySelector(".newProject_add");
-var addForm = document.querySelector(".add_form");
-
-newProjectAdd.addEventListener('click', function () {
-  addForm.classList.add("open");
-});
-
-newProjectAdd.onclick = function () {
-  addForm.classList.add("open");
+  addForm.classList.add(".open");
 };
-*/
