@@ -11,9 +11,18 @@
 function closeForm() {
   var addForm = document.querySelector('.add_form');
   if (addForm.style.display === 'flex') {
-      addForm.style.display = 'none';
+    addForm.style.display = 'none';
   }
 }*/
+
+var newProjectAdd = document.getElementById("newProjectadd");
+var addForm = document.querySelector(".add_form");
+
+newProjectAdd.onclick = function () {
+  addForm.classList.add("open");
+}
+
+/*
 var newProjectAdd = document.querySelector(".newProject_add");
 var addForm = document.querySelector(".add_form");
 
@@ -24,8 +33,4 @@ newProjectAdd.addEventListener('click', function () {
 newProjectAdd.onclick = function () {
   addForm.classList.add("open");
 };
-
-
-
-
-
+*/

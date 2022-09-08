@@ -80,14 +80,15 @@
           <div class="project_block">
             <header class="project_block_header">
               <p>project dashboard</p>
-              <p class="newProject_add">+ create new project</p>
+              <!--<p class="newProject_add" onclick="openWindow()">+ create new project</p>-->
+              <input id="newProjectadd" type="button" value="+ create new project">
             </header>
 
-           <div class="add_form">
+            <div class="add_form">
               <div class="form_block">
                 <section class="title">
                   <p>creating new project</p>
-                  <i class="material-icons close" >close</i>
+                  <i class="material-icons close" onclick="closeForm()">close</i>
                 </section>
                 <section class="form">
                   <form action="#">
@@ -97,7 +98,7 @@
                     <label>
                       <input class="data" type="text" id="customer" name="customer" placeholder="Customer">
                     </label>
-                    <button class="Button_base decline close" type="button">decline</button>
+                    <button class="Button_base decline close" onclick="closeForm()" type="button">decline</button>
                     <button class="Button_base create" type="submit">create</button>
                   </form>
                 </section>

@@ -122,8 +122,8 @@ section.project_time:hover {
     transition: all 0.3s ease 0s;
 }
 
-section.project_time:hover ~ div.task_block {
-    display: block;
+.task_block {
+    display: none;
 }
 
 /*Project list*/
