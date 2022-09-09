@@ -279,16 +279,6 @@ input.data:focus {
     transition: all 0.3s ease 0s;
 }
 
-/*
-.black {
-    position: fixed;
-    z-index: -1;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-}*/
-
 /*Header dashboard*/
 .project_block_header {
     display: flex;
@@ -314,6 +304,13 @@ section.project_block_container {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
+    transition: all 0.3s ease 0s;
+}
+
+section.project_block_container:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease 0s;
 }
 
 /*Add NEW project*/
