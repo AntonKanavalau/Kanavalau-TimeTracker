@@ -1,29 +1,20 @@
 /*Open windows create new projects*/
-/*function openWindow() {
-  var addForm = document.querySelector('.add_form');
-  if (addForm.style.display === 'none') {
-    addForm.classList.add("open");
-  } else {
-    addForm.classList.remove("open");
-  }
+var newProjectAdd = document.querySelector(".newProject_add");
+var addForm = document.querySelector(".add_form");
+
+newProjectAdd.addEventListener('click', function () {
+  addForm.classList.add('open');
+});
+
+/*Close window*/
+var close = document.querySelectorAll(".close");
+for (var i = 0; i < close.length; i++) {
+  close[i].addEventListener('click', function () {
+    addForm.classList.remove('open');
+  });
 }
 
-function closeForm() {
-  var addForm = document.querySelector('.add_form');
-  if (addForm.style.display === 'flex') {
-    addForm.style.display = 'none';
-  }
-}*/
+/*Get inputData add project*/
+var nameProject = document.getElementById('name_project');
+var customer = document.getElementById('customer');
 
-
-
-var newProjectAdd = document.getElementsByClassName(".newProject_add p");
-var addForm = document.getElementsByClassName(".add_form div");
-
-/*newProjectAdd.addEventListener('click', function () {
-  addForm.classList.add(".open");
-});*/
-
-newProjectAdd.onclick = function () {
-  addForm.classList.add(".open");
-};
