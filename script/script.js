@@ -1,7 +1,9 @@
+var i;
+
 /*Open task window*/
 var projectTime = document.querySelectorAll('.project_time');
 var taskBlock = document.querySelector('.task_block')
-for (var i = 0; i < projectTime.length; i++) {
+for (i = 0; i < projectTime.length; i++) {
   projectTime[i].addEventListener('click', function () {
     taskBlock.classList.toggle('open');
   });
@@ -17,7 +19,7 @@ newProjectAdd.addEventListener('click', function () {
 
 /*Close window create new projects*/
 var close = document.querySelectorAll(".close");
-for (var i = 0; i < close.length; i++) {
+for (i = 0; i < close.length; i++) {
   close[i].addEventListener('click', function () {
     openForm.classList.remove('open');
   });
@@ -25,7 +27,10 @@ for (var i = 0; i < close.length; i++) {
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
-FormElement.onsubmit = ValidateInfoForm;
+/*FormElement.onsubmit = ValidateInfoForm;*/
+var create = document.querySelector('.create');
+
+create.addEventListener('click', ValidateInfoForm)
 
 function ValidateInfoForm() {
   var FormElement = document.forms['addProject'];
@@ -37,7 +42,7 @@ function ValidateInfoForm() {
 
   if ((NameProjectValue.length === 0) || (CustomerValue.length === 0)) {
     alert('Please fill in all lines');
-    NameProjectElement.focus() && CustomerElement.focus();
+    NameProjectElement.focus() || CustomerElement.focus();
     return false;
   }
   var html = `
@@ -48,8 +53,10 @@ function ValidateInfoForm() {
         <i class="material-icons" title="Remove Project">delete</i></button>
       </section>
   `;
-  var dashboardProjects = document.querySelector('.dashboard_projects');
-  dashboardProjects.insertAdjacentHTML('afterend', html);
+  setTimeout(() => {
+    var dashboardProjects = document.querySelector('.dashboard_projects');
+    dashboardProjects.insertAdjacentHTML('afterbegin', html);
+  })
   openForm.classList.remove('open');
 }
 
