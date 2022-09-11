@@ -27,7 +27,7 @@ for (i = 0; i < close.length; i++) {
 
 /*Open task window into dashboard_projects*/
 var projectBlockContainer = document.querySelector('.project_block_container');
-var DPtaskBlock = document.getElementById('DP_taskBlock');
+var DPtaskBlock = document.getElementById('DP_taskBlock_1');
 projectBlockContainer.addEventListener('click', function () {
   DPtaskBlock.classList.toggle('open');
 });
@@ -38,6 +38,30 @@ var addTaskForm = document.querySelector(".addTask_form");
 addTask.addEventListener('click', function () {
   addTaskForm.classList.add('open');
 });
+
+/*Get task title data*/
+var taskInput1 = document.getElementById('task_1');
+var taskInput2 = document.getElementById('task_2');
+var taskTitle1 = document.querySelector('.task_1');
+var taskTitle2 = document.querySelector('.task_2');
+
+taskInput1.oninput = function (){
+  taskTitle1.innerHTML = taskInput1.value;
+};
+
+taskInput2.oninput = function (){
+  taskTitle2.innerHTML = taskInput2.value;
+};
+
+
+/*function reTitle () {
+  taskTitle1.innerHTML = taskInput1.value;
+  if (!taskInput1) return;
+  taskTitle2.innerHTML = taskInput2.value;
+  if (!taskInput2) return;
+}
+reTitle ();*/
+
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
@@ -59,13 +83,20 @@ function ValidateInfoForm() {
     NameProjectElement.focus() || CustomerElement.focus();
     return false;
   }
+
   var html = `
-      <section class="project_block_container">
+      <section class="project_block_container" id="${obj.id}">
       <p class="project_title">${NameProjectValue}</p>
       <p class="">${CustomerValue}</p>
       <button class="Button_base" id="delete_btn" type="button">
         <i class="material-icons" title="Remove Project">delete</i></button>
       </section>
+      <div class="task_block" id="DP_taskBlock_${obj.id}">
+        <article class="addTask">
+         <i class="material-icons">add_task</i>
+         <p>create new task</p>
+        </article>
+      </div>
   `;
   var dashboardProjects = document.querySelector('.dashboard_projects');
   dashboardProjects.insertAdjacentHTML('beforebegin', html);
@@ -73,6 +104,7 @@ function ValidateInfoForm() {
 }
 
 /*Get inputData add task*/
+/*
 var FormElement = document.forms['addTask'];
 FormElement.onsubmit = ValidateInfoForm;
 
@@ -91,7 +123,7 @@ function ValidateInfoForm() {
   }
   var html = `
       <article class="task">
-        <p>Task_2</p>
+        <input id="task_${obj.id}">
         <section>
           <p class="task-time" title="00:00:00">00:00:00</p>
           <button class="Button_base play-time"
@@ -101,5 +133,4 @@ function ValidateInfoForm() {
   `;
   DPtaskBlock.insertAdjacentHTML('beforebegin', html);
   openForm.classList.remove('open');
-}
-
+}*/

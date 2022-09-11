@@ -118,7 +118,7 @@ section.project_time {
 }
 
 section.project_time:hover {
-    background: rgba(33, 148, 243, 0.1);;
+    background: rgba(33, 148, 243, 0.1);
     transition: all 0.3s ease 0s;
 }
 
@@ -151,12 +151,25 @@ p.project_title:before {
 }
 
 .task_block > .task:hover {
-    background: rgba(33, 148, 243, 0.1);;
+    background: rgba(33, 148, 243, 0.1);
     transition: all 0.3s ease 0s;
 }
 
 .task > * {
     display: flex;
+}
+
+.task > input {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.task > input:focus {
+    background: white;
+    outline: 1px solid rgba(33, 148, 243);
+    border-radius: 5px;
 }
 
 .addTask {
