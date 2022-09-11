@@ -197,12 +197,7 @@ td {
     border-bottom: 1px solid #bbb;
 }
 
-.nav_list > li:hover a {
-    color: #2194f3;
-    transition: all 0.3s ease 0s;
-}
-
-.nav_list > li:hover i {
+.nav_list > li:hover * {
     color: #2194f3;
     transition: all 0.3s ease 0s;
 }

@@ -1,6 +1,6 @@
 var i;
 
-/*Open task window*/
+/*Open task window into timeProject_container*/
 var projectTime = document.querySelectorAll('.project_time');
 var taskBlock = document.querySelector('.task_block')
 for (i = 0; i < projectTime.length; i++) {
@@ -12,7 +12,6 @@ for (i = 0; i < projectTime.length; i++) {
 /*Open windows create new projects*/
 var newProjectAdd = document.querySelector(".newProject_add");
 var openForm = document.querySelector(".add_form");
-
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });
@@ -24,6 +23,13 @@ for (i = 0; i < close.length; i++) {
     openForm.classList.remove('open');
   });
 }
+
+/*Open task window into timeProject_container*/
+var projectBlockContainer = document.querySelector('.project_block_container');
+var DPtaskBlock = document.getElementById('DP_taskBlock');
+  projectBlockContainer.addEventListener('click', function () {
+    DPtaskBlock.classList.toggle('open');
+  });
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
@@ -53,11 +59,8 @@ function ValidateInfoForm() {
         <i class="material-icons" title="Remove Project">delete</i></button>
       </section>
   `;
-  setTimeout(() => {
     var dashboardProjects = document.querySelector('.dashboard_projects');
-    dashboardProjects.insertAdjacentHTML('afterbegin', html);
-  })
+    dashboardProjects.insertAdjacentHTML('beforebegin', html);
   openForm.classList.remove('open');
 }
-
 
