@@ -65,12 +65,10 @@ reTitle ();*/
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
-/*FormElement.onsubmit = ValidateInfoForm;*/
-var create = document.querySelector('.create');
-
-create.addEventListener('click', ValidateInfoForm)
+FormElement.onsubmit = ValidateInfoForm;
 
 function ValidateInfoForm() {
+  event.preventDefault();
   var FormElement = document.forms['addProject'];
   var NameProjectElement = FormElement.elements['name_project'];
   var CustomerElement = FormElement.elements['customer'];
@@ -85,13 +83,13 @@ function ValidateInfoForm() {
   }
 
   var html = `
-      <section class="project_block_container" id="${obj.id}">
+      <section class="project_block_container">
       <p class="project_title">${NameProjectValue}</p>
       <p class="">${CustomerValue}</p>
       <button class="Button_base" id="delete_btn" type="button">
         <i class="material-icons" title="Remove Project">delete</i></button>
       </section>
-      <div class="task_block" id="DP_taskBlock_${obj.id}">
+      <div class="task_block" id="DP_taskBlock">
         <article class="addTask">
          <i class="material-icons">add_task</i>
          <p>create new task</p>
@@ -99,15 +97,16 @@ function ValidateInfoForm() {
       </div>
   `;
   var dashboardProjects = document.querySelector('.dashboard_projects');
-  dashboardProjects.insertAdjacentHTML('beforebegin', html);
+  dashboardProjects.insertAdjacentHTML('beforebegin', html)
   openForm.classList.remove('open');
+  FormElement.reset();
 }
 
 /*Get inputData add task*/
 /*
 var FormElement = document.forms['addTask'];
 FormElement.onsubmit = ValidateInfoForm;
-
+event.preventDefault();
 create.addEventListener('click', ValidateInfoForm)
 
 function ValidateInfoForm() {
