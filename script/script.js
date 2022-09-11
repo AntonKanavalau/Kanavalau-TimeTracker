@@ -11,25 +11,33 @@ for (i = 0; i < projectTime.length; i++) {
 
 /*Open windows create new projects*/
 var newProjectAdd = document.querySelector(".newProject_add");
-var openForm = document.querySelector(".add_form");
+var openForm = document.querySelector(".addProject_form");
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });
 
-/*Close window create new projects*/
+/*Close window creates*/
 var close = document.querySelectorAll(".close");
 for (i = 0; i < close.length; i++) {
   close[i].addEventListener('click', function () {
     openForm.classList.remove('open');
+    addTaskForm.classList.remove('open');
   });
 }
 
-/*Open task window into timeProject_container*/
+/*Open task window into dashboard_projects*/
 var projectBlockContainer = document.querySelector('.project_block_container');
 var DPtaskBlock = document.getElementById('DP_taskBlock');
-  projectBlockContainer.addEventListener('click', function () {
-    DPtaskBlock.classList.toggle('open');
-  });
+projectBlockContainer.addEventListener('click', function () {
+  DPtaskBlock.classList.toggle('open');
+});
+
+/*Open window create new task*/
+var addTask = document.querySelector(".addTask");
+var addTaskForm = document.querySelector(".addTask_form");
+addTask.addEventListener('click', function () {
+  addTaskForm.classList.add('open');
+});
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
@@ -59,8 +67,39 @@ function ValidateInfoForm() {
         <i class="material-icons" title="Remove Project">delete</i></button>
       </section>
   `;
-    var dashboardProjects = document.querySelector('.dashboard_projects');
-    dashboardProjects.insertAdjacentHTML('beforebegin', html);
+  var dashboardProjects = document.querySelector('.dashboard_projects');
+  dashboardProjects.insertAdjacentHTML('beforebegin', html);
+  openForm.classList.remove('open');
+}
+
+/*Get inputData add task*/
+var FormElement = document.forms['addTask'];
+FormElement.onsubmit = ValidateInfoForm;
+
+create.addEventListener('click', ValidateInfoForm)
+
+function ValidateInfoForm() {
+  var FormElement = document.forms['addTask'];
+  var NameTaskElement = FormElement.elements['name_task'];
+
+  var NameTasktValue = NameTaskElement.value;
+
+  if (NameTaskElement.length === 0) {
+    alert('Please fill in lines');
+    NameTaskElement.focus();
+    return false;
+  }
+  var html = `
+      <article class="task">
+        <p>Task_2</p>
+        <section>
+          <p class="task-time" title="00:00:00">00:00:00</p>
+          <button class="Button_base play-time"
+                  type="button"><i class="material-icons">play_circle_outline</i></button>
+        </section>
+      </article>
+  `;
+  DPtaskBlock.insertAdjacentHTML('beforebegin', html);
   openForm.classList.remove('open');
 }
 

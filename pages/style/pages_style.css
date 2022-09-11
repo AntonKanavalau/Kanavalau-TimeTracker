@@ -215,7 +215,7 @@ p.project_title:before {
 }
 
 /*ADD project*/
-.add_form {
+.addProject_form, .addTask_form {
     display: none;
     align-items: center;
     justify-content: center;
@@ -261,10 +261,12 @@ p.project_title:before {
 
 .close {
     cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
 .close:hover {
     color: black;
+    transition: all 0.3s ease 0s;
 }
 
 input.data {
