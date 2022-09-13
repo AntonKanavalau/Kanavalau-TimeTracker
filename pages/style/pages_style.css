@@ -164,6 +164,7 @@ p.project_title:before {
     outline: none;
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 .task > input:focus {

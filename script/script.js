@@ -1,3 +1,4 @@
+"use strict"
 var i;
 
 /*Open task window into timeProject_container*/
@@ -52,16 +53,6 @@ taskInput1.oninput = function (){
 taskInput2.oninput = function (){
   taskTitle2.innerHTML = taskInput2.value;
 };
-
-
-/*function reTitle () {
-  taskTitle1.innerHTML = taskInput1.value;
-  if (!taskInput1) return;
-  taskTitle2.innerHTML = taskInput2.value;
-  if (!taskInput2) return;
-}
-reTitle ();*/
-
 
 /*Get inputData add project*/
 var FormElement = document.forms['addProject'];
@@ -133,3 +124,4 @@ function ValidateInfoForm() {
   DPtaskBlock.insertAdjacentHTML('beforebegin', html);
   openForm.classList.remove('open');
 }*/
+
