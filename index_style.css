@@ -153,8 +153,12 @@ input.data {
     transition: all 0.3s ease 0s;
 }
 
+input:hover {
+    cursor: pointer;
+    outline: 1px solid rgba(33, 148, 243, 0.5);
+}
+
 input:focus {
-    background: white;
     outline: 1px solid rgba(33, 148, 243);
     border-radius: 40px;
     transition: all 0.3s ease 0s;
