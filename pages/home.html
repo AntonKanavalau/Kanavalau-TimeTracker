@@ -41,27 +41,36 @@
           </section>
           <p class="projectName">Project_1</p>
           <section class="header_time">
-            <p class="time" title="00:00:00">00:00:00</p>
-            <button class="Button_base play-time" type="button"><i class="material-icons">play_circle_outline</i></button>
+            <p class="time"><span class="hours">00</span>:
+                            <span class="minutes">00</span>:
+                            <span class="seconds">00</span></p>
+            <button class="Button_base play-time"
+                    type="button"><i class="material-icons" id="play">play_circle_outline</i></button>
           </section>
         </header>
         <div class="tracker_container">
           <section class="total-time_block">
             <p class="total-time_title">total time</p>
-            <p class="total-time" title="00:00:00">00:00:00</p>
+            <p class="total-time"><span class="hours">00</span>:
+                                  <span class="minutes">00</span>:
+                                  <span class="seconds">00</span></p>
           </section>
 
           <div class="timeProject_container">
             <div class="timeProject_list">
               <section class="projectTime__container list">
                 <p class="project_title">Project_1</p>
-                <p class="project_total-time" title="00:00:00">00:00:00</p>
+                <p class="project_total-time"><span class="hours">00</span>:
+                                              <span class="minutes">00</span>:
+                                              <span class="seconds">00</span></p>
               </section>
               <div class="task_block">
                 <article class="task">
                   <p class="task_1">Task_1</p>
                   <section>
-                    <p class="task-time" title="00:00:00">00:00:00</p>
+                    <p class="task-time"><span class="hours">00</span>:
+                                          <span class="minutes">00</span>:
+                                          <span class="seconds">00</span></p>
                     <button class="Button_base play-time"
                             type="button"><i class="material-icons">play_circle_outline</i></button>
                   </section>
@@ -69,7 +78,9 @@
                 <article class="task">
                   <p class="task_2">Task_2</p>
                   <section>
-                    <p class="task-time" title="00:00:00">00:00:00</p>
+                    <p class="task-time"><span class="hours">00</span>:
+                                        <span class="minutes">00</span>:
+                                        <span class="seconds">00</span></p>
                     <button class="Button_base play-time"
                             type="button"><i class="material-icons">play_circle_outline</i></button>
                   </section>
@@ -108,33 +119,39 @@
 
 
             <div class="dashboard_projects">
-              <section class="projectTime__container header_dashboard">
-                <p class="project_title">Project_1</p>
-                <p>Customers_1</p>
-                <button class="Button_base" id="delete_btn" type="button">
-                  <i class="material-icons" title="Remove Project">delete</i></button>
-              </section>
-              <div class="task_block" id="DP_taskBlock_1">
-                <article class="task">
-                  <input id="task_1" value="Task_1">
-                  <section>
-                    <p class="task-time" title="00:00:00">00:00:00</p>
-                    <button class="Button_base play-time"
-                            type="button"><i class="material-icons">play_circle_outline</i></button>
-                  </section>
-                </article>
-                <article class="task">
-                  <input id="task_2" value="Task_2">
-                  <section>
-                    <p class="task-time" title="00:00:00">00:00:00</p>
-                    <button class="Button_base play-time"
-                            type="button"><i class="material-icons">play_circle_outline</i></button>
-                  </section>
-                </article>
-                <article class="addTask">
-                  <i class="material-icons">add_task</i>
-                  <p>create new task</p>
-                </article>
+              <div id="base">
+                <section class="projectTime__container header_dashboard">
+                  <p class="project_title">Project_1</p>
+                  <p>Customers_1</p>
+                  <button class="Button_base" id="delete_btn" type="button">
+                    <i class="material-icons" title="Remove Project">delete</i></button>
+                </section>
+                <div class="task_block" id="DP_taskBlock_1">
+                  <article class="task">
+                    <input id="task_1" value="Task_1">
+                    <section>
+                      <p class="task-time"><span class="hours">00</span>:
+                                          <span class="minutes">00</span>:
+                                          <span class="seconds">00</span></p>
+                      <button class="Button_base play-time"
+                              type="button"><i class="material-icons">play_circle_outline</i></button>
+                    </section>
+                  </article>
+                  <article class="task">
+                    <input id="task_2" value="Task_2">
+                    <section>
+                      <p class="task-time"><span class="hours">00</span>:
+                                          <span class="minutes">00</span>:
+                                          <span class="seconds">00</span></p>
+                      <button class="Button_base play-time"
+                              type="button"><i class="material-icons">play_circle_outline</i></button>
+                    </section>
+                  </article>
+                  <article class="addTask">
+                    <i class="material-icons">add_task</i>
+                    <p>create new task</p>
+                  </article>
+                </div>
               </div>
             </div>
 

@@ -7,7 +7,7 @@ window.onload = function () {
     var items = document.querySelector('.images-parallax__items');
     var people = document.querySelector('.images-parallax__people');
 
-//Coeffecients
+    //Coeffecients
     var forBackground = 40;
     var forItems = 20;
     var forPeople = 10;
@@ -20,7 +20,7 @@ window.onload = function () {
     var coordXprocent = 0;
     var coordYprocent = 0;
 
-    function setMouseParallaxStyle () {
+    function setMouseParallaxStyle() {
       var distX = coordXprocent - positionX;
       var distY = coordYprocent - positionY;
 
@@ -33,9 +33,10 @@ window.onload = function () {
 
       requestAnimationFrame(setMouseParallaxStyle);
     }
+
     setMouseParallaxStyle();
 
-    parallax.addEventListener("mousemove", function (e){
+    parallax.addEventListener("mousemove", function (e) {
       var parallaxWidth = parallax.offsetWidth;
       var parallaxHeight = parallax.offsetHeight;
 

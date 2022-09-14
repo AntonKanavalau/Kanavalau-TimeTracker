@@ -71,25 +71,28 @@ function ValidateInfoForm() {
     NameProjectElement.focus() || CustomerElement.focus();
     return false;
   }
+var ID = 0;
 
   var html = `
-      <section class="project_block_container">
-      <p class="project_title">${NameProjectValue}</p>
-      <p class="">${CustomerValue}</p>
-      <button class="Button_base" id="delete_btn" type="button">
-        <i class="material-icons" title="Remove Project">delete</i></button>
-      </section>
-      <div class="task_block" id="DP_taskBlock">
-        <article class="addTask">
-         <i class="material-icons">add_task</i>
-         <p>create new task</p>
-        </article>
+      <div id="${ID}">
+        <section class="projectTime__container header_dashboard">
+        <p class="project_title">${NameProjectValue}</p>
+        <p class="">${CustomerValue}</p>
+        <button class="Button_base" id="delete_btn" type="button">
+          <i class="material-icons" title="Remove Project">delete</i></button>
+        </section>
+        <div class="task_block">
+          <article class="addTask">
+          <i class="material-icons">add_task</i>
+          <p>create new task</p>
+          </article>
+        </div>
       </div>
   `;
   var dashboardProjects = document.querySelector('.dashboard_projects');
-  dashboardProjects.insertAdjacentHTML('beforebegin', html)
-  openForm.classList.remove('open');
+  dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
+  openForm.classList.remove('open');
 }
 
 /*Get inputData add task*/
@@ -124,3 +127,86 @@ function ValidateInfoForm() {
   openForm.classList.remove('open');
 }*/
 
+//Timer fields
+var hourElement = document.querySelector('.hours');
+var minuteElement = document.querySelector('.minutes');
+var secondElement = document.querySelector('.seconds');
+
+
+//Buttons
+var playTime = document.querySelector('.play-time')
+var play = document.getElementById('play');
+playTime.addEventListener('click',() => {
+  clearInterval(interval);
+  interval = setInterval(startTimer, 10)
+  play.innerText = "pause";
+
+  if(play.innerText === "pause") {
+    playTime.addEventListener('click',() => {
+      clearInterval(interval);
+      play.innerText = "play_circle_outline";
+  });
+}
+});
+
+
+
+//Variables
+var hour = 00;
+var minute = 00;
+var second = 00;
+var millisecond = 00;
+var interval;
+
+
+
+function startTimer () {
+  millisecond++;
+
+  //Milliseconds
+  if(millisecond > 99) {
+  second++;
+    secondElement.innerText = "0" + second;
+    millisecond = 0;
+  }
+
+  //Seconds
+  if(second < 9 ) {
+    secondElement.innerText = "0" + second;
+  }
+  if(second > 9 ) {
+    secondElement.innerText = second;
+  }
+  if(second > 59 ) {
+    minute++;
+    minuteElement.innerText = "0" + minute;
+    second = 0;
+    secondElement.innerText = "0" + second;
+  }
+
+  //Minutes
+  if(minute < 9 ) {
+    minuteElement.innerText = "0" + minute;
+  }
+  if(minute > 9 ) {
+    minuteElement.innerText = minute;
+  }
+  if(minute > 59 ) {
+    hour++;
+    hourElement.innerText = "0" + hour;
+    minute = 0;
+    minuteElement.innerText = "0" + minute;
+  }
+
+  //Hours
+  if(hour < 9 ) {
+    hourElement.innerText = "0" + hour;
+  }
+  if(hour > 9 ) {
+    hourElement.innerText = hour;
+  }
+  if(second > 23 ) {
+    hour = 0;
+    hourElement.innerText = "0" + hour;
+  }
+}
