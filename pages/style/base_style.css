@@ -47,8 +47,7 @@ main {
     padding: 1.5rem;
 }
 
-@media screen and (max-width: 1020px),
-        screen and (max-height: 670px){
+@media screen and (max-width: 1020px), screen and (max-height: 670px) {
     .container {
         padding: 0.5rem;
     }
@@ -120,10 +119,24 @@ td {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0.625rem;
-    background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
+    background: linear-gradient(-45deg, #2196f3ff, #56ccf2ff, #23a6d5, #23d5ab);
     text-align: center;
     color: #fff;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     transition: all 0.3s ease 0s;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media screen and (max-width: 670px) {
