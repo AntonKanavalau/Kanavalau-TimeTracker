@@ -22,6 +22,14 @@ header > * {
     align-items: center;
 }
 
+.taskTitle,
+.projectName,
+.projectTime__container > p:not(.project_total-time) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @media screen and (max-width: 670px) {
     .content_block > header {
         height: 4rem;
@@ -107,28 +115,43 @@ div.timeProject_container > li {
     transition: all 0.3s ease 0s;
 }
 
-/*Block TOTAL time*/
-section.project_time {
+/*Block project time*/
+.projectTime__container {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem 1rem 0;
     border-bottom: 1px solid #bbb;
     cursor: pointer;
+    transform: perspective(1px) translateZ(0);
     transition: all 0.3s ease 0s;
 }
 
-section.project_time:hover {
+.projectTime__container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(33, 148, 243, 0.1);
-    transition: all 0.3s ease 0s;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.projectTime__container:hover:before {
+    cursor: pointer;
+    transform: scaleX(1);
 }
 
 /*Project list*/
-p.project_title {
+.project_title {
     font-weight: 600;
     text-transform: uppercase;
 }
 
-p.project_title:before {
+.project_title:before {
     content: "\e5df";
     font-family: 'Material Icons';
     color: #009a00;
@@ -339,17 +362,13 @@ input.data:focus {
 }
 
 /*Header dashboard*/
-section.project_block_container {
-    display: flex;
-    justify-content: space-between;
+.header_dashboard{
     padding: 1rem 0;
-    transition: all 0.3s ease 0s;
+    border-bottom: none;
 }
 
-section.project_block_container:hover {
-    cursor: pointer;
-    background: rgba(33, 148, 243, 0.1);;
-    transition: all 0.3s ease 0s;
+.header_dashboard > p {
+    max-width: 35vw;
 }
 
 /*Add NEW project*/

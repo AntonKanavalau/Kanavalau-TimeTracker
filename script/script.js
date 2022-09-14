@@ -1,8 +1,7 @@
-"use strict"
 var i;
 
 /*Open task window into timeProject_container*/
-var projectTime = document.querySelectorAll('.project_time');
+var projectTime = document.querySelectorAll('.list');
 var taskBlock = document.querySelector('.task_block')
 for (i = 0; i < projectTime.length; i++) {
   projectTime[i].addEventListener('click', function () {
@@ -27,7 +26,7 @@ for (i = 0; i < close.length; i++) {
 }
 
 /*Open task window into dashboard_projects*/
-var projectBlockContainer = document.querySelector('.project_block_container');
+var projectBlockContainer = document.querySelector('.header_dashboard');
 var DPtaskBlock = document.getElementById('DP_taskBlock_1');
 projectBlockContainer.addEventListener('click', function () {
   DPtaskBlock.classList.toggle('open');
