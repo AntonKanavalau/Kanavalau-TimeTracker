@@ -45,11 +45,11 @@ var taskInput2 = document.getElementById('task_2');
 var taskTitle1 = document.querySelector('.task_1');
 var taskTitle2 = document.querySelector('.task_2');
 
-taskInput1.oninput = function (){
+taskInput1.oninput = function () {
   taskTitle1.innerHTML = taskInput1.value;
 };
 
-taskInput2.oninput = function (){
+taskInput2.oninput = function () {
   taskTitle2.innerHTML = taskInput2.value;
 };
 
@@ -71,7 +71,7 @@ function ValidateInfoForm() {
     NameProjectElement.focus() || CustomerElement.focus();
     return false;
   }
-var ID = 0;
+  var ID = 0;
 
   var html = `
       <div id="${ID}">
@@ -127,6 +127,8 @@ function ValidateInfoForm() {
   openForm.classList.remove('open');
 }*/
 
+
+/*Timer*/
 //Timer fields
 var hourElement = document.querySelector('.hours');
 var minuteElement = document.querySelector('.minutes');
@@ -135,78 +137,78 @@ var secondElement = document.querySelector('.seconds');
 
 //Buttons
 var playTime = document.querySelector('.play-time')
-var play = document.getElementById('play');
-playTime.addEventListener('click',() => {
+var playIcon = document.getElementById('play');
+playTime.addEventListener('click', () => {
   clearInterval(interval);
-  interval = setInterval(startTimer, 10)
-  play.innerText = "pause";
-
-  if(play.innerText === "pause") {
-    playTime.addEventListener('click',() => {
-      clearInterval(interval);
-      play.innerText = "play_circle_outline";
-  });
-}
+  interval = setInterval(startTimer, 10);
+  playTime.id = "stopTime";
+  playIcon.innerText = "pause";
 });
 
+//Must stop timer, but it isn't true(
+/*var stopTime = document.getElementById('stopTime');
+stopTime.addEventListener('click', () => {
+  clearInterval(interval);
+  playTime.removeAttribute('id');
+  playIcon.innerText = "play_circle_outline";
+});*/
 
 
 //Variables
-var hour = 00;
-var minute = 00;
-var second = 00;
-var millisecond = 00;
-var interval;
+  var hour = 00;
+  var minute = 00;
+  var second = 00;
+  var millisecond = 00;
+  var interval;
 
 
+  function startTimer() {
+    millisecond++;
 
-function startTimer () {
-  millisecond++;
+    //Milliseconds
+    if (millisecond > 99) {
+      second++;
+      secondElement.innerText = "0" + second;
+      millisecond = 0;
+    }
 
-  //Milliseconds
-  if(millisecond > 99) {
-  second++;
-    secondElement.innerText = "0" + second;
-    millisecond = 0;
-  }
+    //Seconds
+    if (second < 9) {
+      secondElement.innerText = "0" + second;
+    }
+    if (second > 9) {
+      secondElement.innerText = second;
+    }
+    if (second > 59) {
+      minute++;
+      minuteElement.innerText = "0" + minute;
+      second = 0;
+      secondElement.innerText = "0" + second;
+    }
 
-  //Seconds
-  if(second < 9 ) {
-    secondElement.innerText = "0" + second;
-  }
-  if(second > 9 ) {
-    secondElement.innerText = second;
-  }
-  if(second > 59 ) {
-    minute++;
-    minuteElement.innerText = "0" + minute;
-    second = 0;
-    secondElement.innerText = "0" + second;
-  }
+    //Minutes
+    if (minute < 9) {
+      minuteElement.innerText = "0" + minute;
+    }
+    if (minute > 9) {
+      minuteElement.innerText = minute;
+    }
+    if (minute > 59) {
+      hour++;
+      hourElement.innerText = "0" + hour;
+      minute = 0;
+      minuteElement.innerText = "0" + minute;
+    }
 
-  //Minutes
-  if(minute < 9 ) {
-    minuteElement.innerText = "0" + minute;
+    //Hours
+    if (hour < 9) {
+      hourElement.innerText = "0" + hour;
+    }
+    if (hour > 9) {
+      hourElement.innerText = hour;
+    }
+    if (second > 23) {
+      hour = 0;
+      hourElement.innerText = "0" + hour;
+    }
   }
-  if(minute > 9 ) {
-    minuteElement.innerText = minute;
-  }
-  if(minute > 59 ) {
-    hour++;
-    hourElement.innerText = "0" + hour;
-    minute = 0;
-    minuteElement.innerText = "0" + minute;
-  }
-
-  //Hours
-  if(hour < 9 ) {
-    hourElement.innerText = "0" + hour;
-  }
-  if(hour > 9 ) {
-    hourElement.innerText = hour;
-  }
-  if(second > 23 ) {
-    hour = 0;
-    hourElement.innerText = "0" + hour;
-  }
-}
