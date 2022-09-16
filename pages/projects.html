@@ -37,10 +37,32 @@
         <div class="projects-list_container">
           <header class="project_block_header">
             <p class="correct">Projects</p>
-            <button class="Button_base" type="button" title="Add project">
+            <button class="Button_base btnAddProject" type="button" title="Add project">
               <i class="material-icons add">add_circle</i>
             </button>
           </header>
+
+          <div class="addProject_form">
+            <div class="form_block">
+              <section class="title">
+                <p>creating new project</p>
+                <i class="material-icons close">close</i>
+              </section>
+              <section class="form">
+                <form name="addProject" id="addProject">
+                  <label>
+                    <input class="data" type="text" name="name_project" placeholder="Name your project">
+                  </label>
+                  <label>
+                    <input class="data" type="text" name="customer" placeholder="Customer">
+                  </label>
+                  <button class="Button_base decline close" type="button">decline</button>
+                  <button class="Button_base create">create</button>
+                </form>
+              </section>
+            </div>
+          </div>
+
           <div class="table">
             <table>
               <thead class="table-head">
@@ -68,5 +90,6 @@
         </div>
       </div>
     </main>
+    <script src="../script/click.js"></script>
   </body>
 </html>

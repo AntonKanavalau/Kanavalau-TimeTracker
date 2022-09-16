@@ -213,6 +213,7 @@ div.timeProject_container > li {
 
 .addTask:hover > * {
     cursor: pointer;
+    font-size: 1.05rem;
     color: #2194f3;
     transition: all 0.3s ease 0s;
 }
@@ -317,11 +318,18 @@ input.data {
     margin: 0.5rem auto;
     text-align: center;
     background: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+input.data:hover {
+    cursor: pointer;
+    outline: 1px solid rgba(33, 148, 243, 0.5);
 }
 
 input.data:focus {
-    outline: none;
-    border: 1px solid #e3e6e8ff;
+    outline: 1px solid rgba(33, 148, 243);
+    border-radius: 40px;
+    transition: all 0.3s ease 0s;
 }
 
 .decline, .create {
