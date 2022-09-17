@@ -24,7 +24,10 @@ header > * {
 
 .taskTitle,
 .projectName,
-.projectTime__container > p:not(.project_total-time) {
+.projectTime__container > p:not(.project_total-time),
+.project_name,
+.company,
+.team {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -148,7 +151,6 @@ div.timeProject_container > li {
 /*Project list*/
 .project_title {
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .project_title:before {

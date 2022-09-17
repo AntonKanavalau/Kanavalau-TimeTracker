@@ -16,23 +16,6 @@ newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });
 
-/*Open windows create new projects (project pages)*/
-/*var addProject = document.querySelector(".Button_base");
-addProject.addEventListener('click', function () {
-  openForm.classList.add('open');
-});*/
-
-
-
-/*Close window creates*/
-var close = document.querySelectorAll(".close");
-for (i = 0; i < close.length; i++) {
-  close[i].addEventListener('click', function () {
-    openForm.classList.remove('open');
-    addTaskForm.classList.remove('open');
-  });
-}
-
 /*Open task window into dashboard_projects*/
 var projectBlockContainer = document.querySelectorAll('.header_dashboard');
 var DPtaskBlock = document.getElementById('DP_taskBlock_1');
@@ -42,16 +25,23 @@ for (i = 0; i < projectBlockContainer.length; i++) {
   });
 }
 
-
-
 /*Open window create new task*/
 var addTask = document.querySelector(".addTask");
 var addTaskForm = document.querySelector(".addTask_form");
 addTask.addEventListener('click', function () {
   addTaskForm.classList.add('open');
+  FormElement.reset();
 });
 
-
+/*Close window creates*/
+var close = document.querySelectorAll(".close");
+for (i = 0; i < close.length; i++) {
+  close[i].addEventListener('click', function () {
+    openForm.classList.remove('open');
+    addTaskForm.classList.remove('open');
+    FormElement.reset();
+  });
+}
 
 /*Get task title data*/
 var taskInput1 = document.getElementById('task_1');
@@ -80,11 +70,17 @@ function ValidateInfoForm() {
   var NameProjectValue = NameProjectElement.value;
   var CustomerValue = CustomerElement.value;
 
-  if ((NameProjectValue.length === 0) || (CustomerValue.length === 0)) {
-    alert('Please fill in all lines');
-    NameProjectElement.focus() || CustomerElement.focus();
+  if (NameProjectValue.length === 0) {
+    alert('Please fill Name Project');
+    NameProjectElement.focus();
     return false;
   }
+  if (CustomerValue.length === 0) {
+    alert('Please fill Customer');
+    CustomerElement.focus();
+    return false;
+  }
+
   var ID = 0;
 
   var html = `
