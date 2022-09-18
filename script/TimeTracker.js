@@ -3,6 +3,11 @@
 var hourElement = document.querySelector('.hours-1');
 var minuteElement = document.querySelector('.minutes-1');
 var secondElement = document.querySelector('.seconds-1');
+
+
+var hourElement2 = document.querySelector('.hours-2');
+var minuteElement2 = document.querySelector('.minutes-2');
+var secondElement2 = document.querySelector('.seconds-2');
 var i;
 
 
@@ -114,7 +119,6 @@ function startTimer() {
   this.removeEventListener('click', startTimer);
   this.addEventListener('click', stopTimer);
   playIcon.innerText = "pause";
-  console.log(secondElement);
 }
 
 function stopTimer() {

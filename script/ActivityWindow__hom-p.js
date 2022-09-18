@@ -48,9 +48,11 @@ var taskInput1 = document.getElementById('task_1');
 var taskInput2 = document.getElementById('task_2');
 var taskTitle1 = document.querySelector('.task_1');
 var taskTitle2 = document.querySelector('.task_2');
+var taskTitle = document.querySelector('.taskTitle');
 
 taskInput1.oninput = function () {
   taskTitle1.innerHTML = taskInput1.value;
+  taskTitle.innerHTML = taskInput1.value;
 };
 
 taskInput2.oninput = function () {
