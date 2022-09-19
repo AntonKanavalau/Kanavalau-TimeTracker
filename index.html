@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link href="index_style.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="index_style.less" >
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <title>TimeTracker</title>
   </head>
   <body>
@@ -25,13 +26,12 @@
       </section>
     </div>
 <main>
-      <div class="content_block">
-        <div class="block">
-          <h1><span>time tracker</span> <br> for you and your tasks </h1>
+      <div class="content">
+          <h1><span>time tracker</span><br>for you and your tasks </h1>
           <form action="#">
             <label>
               <input class="data" type="email" id="email" name="email"
-                     autocomplete="current-password" placeholder="Enter you e-Mail" required>
+                     placeholder="Enter you e-Mail" required>
             </label>
             <label>
               <input class="data" type="password" id="pwd" name="pwd"
@@ -41,14 +41,12 @@
             <section class="cookies">
               <input type="checkbox" id="check">
               <label for="check">We use cookies to provide you better user experience. By checking this you agree to use
-                our web-site.
-                Learn more in our <a href="#" title="Privacy policy">Privacy policy</a>
+                our web-site. Learn more in our <a href="#" title="Privacy policy">Privacy policy</a>
               </label>
             </section>
             <button type="submit" onclick="location.href='pages/home.html'" name="Login">Login</button>
             <p><a href="#" class="add-acc">Create account</a> or sign in with <a href="#" class="add-acc">Google</a></p>
           </form>
-        </div>
       </div>
     </main>
     <script src="script/parallax.js"></script>
