@@ -8,7 +8,7 @@
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
     padding: 0 1.25rem;
-    height: 6rem;
+    height: 4rem;
 }
 
 @media screen and (max-width: 670px) {
@@ -28,11 +28,14 @@ header > * {
 .project_name,
 .company,
 .team {
-    display: inline-block;
-    max-width: 25%;
+    max-width: 15rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.task_1, .task_2 {
+    max-width: 8rem;
 }
 
 @media screen and (max-width: 670px) {
@@ -226,7 +229,7 @@ div.timeProject_container > li {
 .dashboard_block {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height:calc(100% - 35vh - 4rem);
     box-sizing: border-box;
     padding: 1.5rem;
 }

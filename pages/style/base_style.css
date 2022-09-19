@@ -95,6 +95,7 @@ td {
     width: 16rem;
     height: 100vh;
     position: fixed;
+    box-sizing: border-box;
     z-index: 100;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.18) 0 4px 18px;
@@ -176,14 +177,17 @@ td {
 
 /*Site navigation list*/
 .nav-block {
-    height: 80vh;
+    height: calc(100vh - 9.75rem);
     box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    text-align: center;
 }
+
+.-align
 
 @media screen and (max-width: 670px) {
     .nav-block {
