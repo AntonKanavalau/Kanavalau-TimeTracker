@@ -14,6 +14,14 @@ body {
   }
 }
 
+main {
+  @media screen and (max-width: 1500px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /*Mixins*/
 .w-h_100p {
   width: 100%;
@@ -23,6 +31,13 @@ body {
 .t-l_0 {
   top: 0;
   left: 0;
+}
+
+.prlxPos {
+  position: absolute;
+  .w-h_100p;
+  .t-l_0;
+  box-sizing: border-box;
 }
 
 .transition {
@@ -40,56 +55,46 @@ body {
 
 .parallax {
   min-height: 100vh;
+
+  &__body {
+    position: fixed;
+    .w-h_100p;
+    .t-l_0;
+  }
+
+  &__images {
+    position: absolute;
+    .w-h_100p;
+    .t-l_0;
+    z-index: 1;
+  }
 }
 
-.parallax__body {
-  position: fixed;
-  .w-h_100p;
-  .t-l_0;
-}
+.images-parallax {
+  &__background {
+    .prlxPos;
+    background: url("images/background-01.svg") @BGalign;
+    background-size: 35em;
+    top: 0;
+  }
 
-.parallax__images {
-  position: absolute;
-  .w-h_100p;
-  .t-l_0;
-  z-index: 1;
-}
+  &__items {
+    .prlxPos;
+    background: url("images/items-01.svg") @BGalign;
+    background-size: 35em;
+    z-index: 2;
+  }
 
-.images-parallax__item {
-  position: absolute;
-  .w-h_100p;
-  .t-l_0;
-}
-
-.images-parallax__background,
-.images-parallax__items,
-.images-parallax__people {
-  position: absolute;
-  .w-h_100p;
-  .t-l_0;
-  box-sizing: border-box;
+  &__people {
+    .prlxPos;
+    background: url("images/people-01.svg") @BGalign;
+    background-size: 35em;
+    z-index: 3;
+  }
 
   @media screen and (max-width: 1280px) {
     display: none;
   }
-}
-
-.images-parallax__background {
-  background: url("images/background-01.svg") @BGalign;
-  background-size: 35em;
-  top: 0;
-}
-
-.images-parallax__items {
-  background: url("images/items-01.svg") @BGalign;
-  background-size: 35em;
-  z-index: 2;
-}
-
-.images-parallax__people {
-  background: url("images/people-01.svg") @BGalign;
-  background-size: 35em;
-  z-index: 3;
 }
 
 /*block position & size*/
@@ -114,14 +119,6 @@ body {
     padding: 1em;
     box-sizing: border-box;
     top: 10%;
-  }
-}
-
-main {
-  @media screen and (max-width: 1500px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 

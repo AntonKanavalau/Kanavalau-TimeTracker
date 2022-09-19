@@ -91,7 +91,7 @@ td {
 }
 
 /*NAV block style*/
-.home-nav {
+.nav {
     width: 16rem;
     height: 100vh;
     position: fixed;
@@ -102,19 +102,19 @@ td {
 }
 
 @media screen and (max-width: 1020px) {
-    .home-nav {
+    .nav {
         width: 11rem;
     }
 }
 
 @media screen and (max-width: 670px) {
-    .home-nav {
+    .nav {
         width: 3rem;
     }
 }
 
 /*Profile block*/
-.nav-profile_block {
+.nav--profile {
     height: 7.75rem;
     display: flex;
     flex-direction: column;
@@ -141,42 +141,42 @@ td {
 }
 
 @media screen and (max-width: 670px) {
-    .nav-profile_block {
+    .nav--profile {
         height: 4rem;
         padding: 0;
     }
 }
 
-.nav-profile_block:hover {
+.nav--profile:hover {
     opacity: 0.9;
     background-size: 200% 200%;
     transition: all 0.3s ease 0s;
 }
 
-.nav-icon-correction {
+.nav__icon {
     font-size: 4rem;
     color: #fff;
 }
 
 @media screen and (max-width: 670px) {
-    .nav-icon-correction {
+    .nav__icon {
         font-size: 3rem;
     }
 }
 
-.nav-login {
+.nav__login {
     margin: 0;
     font-size: 1.1rem;
 }
 
 @media screen and (max-width: 670px) {
-    .nav-login {
+    .nav__login {
         display: none;
     }
 }
 
 /*Site navigation list*/
-.nav-block {
+.nav--list {
     height: calc(100vh - 9.75rem);
     box-sizing: border-box;
     display: flex;
@@ -190,44 +190,44 @@ td {
 .-align
 
 @media screen and (max-width: 670px) {
-    .nav-block {
+    .nav--list {
         padding: 5px;
     }
 
-    .nav-block > * {
+    .nav--list > * {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
 
-.nav_list {
+.link-list {
     width: 100%;
 }
 
-.nav_list > li {
+.link-list > li {
     font-weight: 400;
     padding: 0.7rem 0;
 }
 
-.nav_list > li:first-child {
+.link-list > li:first-child {
     line-height: 3rem;
     border-bottom: 1px solid #bbb;
 }
 
-.nav_list > li:hover * {
+.link-list > li:hover * {
     color: #2194f3;
     transition: all 0.3s ease 0s;
 }
 
 /*Link navigation*/
-a.nav_link {
+a.link-list__link {
     display: flex;
     align-items: center;
 }
 
 @media screen and (max-width: 670px) {
-    a.nav_link > span {
+    a.link-list__link > span {
         display: none;
     }
 }
@@ -236,12 +236,12 @@ a.nav_link {
     color: #2194f3;
 }
 
-a.nav_link > i {
+a.link-list__link > i {
     padding-right: 1rem;
 }
 
 @media screen and (max-width: 670px) {
-    a.nav_link > i {
+    a.link-list__link > i {
         padding-right: 0;
     }
 }
