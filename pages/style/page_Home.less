@@ -1,0 +1,139 @@
+@import "base";
+
+.content {
+  &__header {
+    #flex > .daj_b;
+    background: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+    padding: 0 1.25em;
+    height: 3.5em;
+
+    & > * {
+      #flex > .da;
+    }
+
+    &--project-title {
+      font-weight: bold;
+      .textOverflow;
+    }
+
+    @media screen and (max-width: 670px) {
+      padding: 0.5em;
+      height: 2em;
+    }
+  }
+}
+
+/*ALL time block*/
+.tracker {
+  height: 35vh;
+  padding: 1.5em;
+  display: flex;
+
+  @media screen and (max-width: 670px) {
+    padding: 0.5em;
+    flex-direction: column;
+  }
+
+  & > * {
+    display: flex;
+  }
+
+  /*Total time block*/
+
+  &__totalTime {
+    width: 60%;
+    font-size: 2.5rem;
+    #flex > .daf_cj_c;
+
+    &--title {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 670px) {
+      width: auto;
+      #flex > .da_sf_rj_a;
+      font-size: 1.5em;
+    }
+  }
+
+  /*Total time project and task*/
+  &__ProjectBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1rem 1rem 2rem;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+/*Block project time*/
+.projectTime {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1rem 0;
+  border-bottom: 1px solid #bbb;
+  cursor: pointer;
+  transform: perspective(1px) translateZ(0);
+  transition: all 0.3s ease 0s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    .t-l_0;
+    right: 0;
+    bottom: 0;
+    background: fade(@custBlue, 10%);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    cursor: pointer;
+    transform: scaleX(1);
+  }
+
+  &-title {
+    font-weight: 600;
+
+    &:before {
+      content: "\e5df";
+      font-family: 'Material Icons';
+      color: #009a00;
+    }
+  }
+}
+
+.timeTaskBlock {
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0;
+
+  &__task {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    margin-left: 1rem;
+    border-bottom: 1px solid #f0f4f8;
+    transition: all 0.3s ease 0s;
+
+    & > * {
+     #flex > .da;
+    }
+
+    &:hover {
+      background: fade(@custBlue, 10%);
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.open {
+  display: flex !important;
+}
+

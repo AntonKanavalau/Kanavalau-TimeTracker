@@ -8,7 +8,7 @@
       rel="stylesheet">
     <!--<link href="style/pages_style.css" rel="stylesheet">-->
     <link rel="stylesheet/less" type="text/css" href="style/navigation.less" >
-    <link rel="stylesheet/less" type="text/css" href="style/base.less" >
+    <link rel="stylesheet/less" type="text/css" href="style/page_Home.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <title>TimeTracker</title>
   </head>
@@ -35,15 +35,15 @@
     </nav>
 
     <main>
-      <div class="content_block">
-        <header>
-          <section class="header--taskBlock">
-            <button class="Button_base" type="button">
-              <i class="material-icons">more_vert</i></button>
-            <p class="taskTitle">Task_1</p>
+      <div class="content">
+
+        <header class="content__header">
+          <section>
+            <button type="button"><i class="material-icons">more_vert</i></button>
+            <p class="content__header--task-title">Task_1</p>
           </section>
-          <p class="projectName">Project_1</p>
-          <section class="header_time">
+          <p class="content__header--project-title">Project_1</p>
+          <section>
             <p class="time"><span class="hours-1">00</span>:
                             <span class="minutes-1">00</span>:
                             <span class="seconds-1">00</span></p>
@@ -51,24 +51,28 @@
               <i class="material-icons" id="play">play_circle_outline</i></button>
           </section>
         </header>
-        <div class="tracker_container">
-          <section class="total-time_block">
-            <p class="total-time_title">total time</p>
-            <p class="total-time"><span class="Thours">00</span>:
-                                  <span class="Tminutes">00</span>:
-                                  <span class="Tseconds">00</span></p>
+
+        <div class="tracker">
+          <section class="tracker__totalTime">
+            <p class="tracker__totalTime--title">total time</p>
+            <p><span class="Thours">00</span>:
+              <span class="Tminutes">00</span>:
+              <span class="Tseconds">00</span></p>
           </section>
 
-          <div class="timeProject_container">
-            <div class="timeProject_list">
-              <section class="projectTime__container list">
-                <p class="project_title">Project_1</p>
-                <p class="project_total-time"><span class="TPhours">00</span>:
+          <div class="tracker__ProjectBlock">
+
+            <div class="timeProjectList">
+              <section class="projectTime list">
+                <p class="projectTime-title">Project_1</p>
+                <p class="projectTime-time"><span class="TPhours">00</span>:
                                               <span class="TPminutes">00</span>:
                                               <span class="TPseconds">00</span></p>
               </section>
-              <div class="task_block">
-                <article class="task">
+
+              <div class="timeTaskBlock">
+
+                <article class="timeTaskBlock__task">
                   <p class="task_1">Task_1</p>
                   <section>
                     <p class="task-time"><span class="hours-1">00</span>:
@@ -78,7 +82,8 @@
                       <i class="material-icons">play_circle_outline</i></button>
                   </section>
                 </article>
-                <article class="task">
+
+                <article class="timeTaskBlock__task">
                   <p class="task_2">Task_2</p>
                   <section>
                     <p class="task-time"><span class="hours-2">00</span>:
@@ -89,9 +94,13 @@
                   </section>
                 </article>
               </div>
+
             </div>
           </div>
+
         </div>
+
+
         <div class="dashboard_block">
           <div class="project_block">
             <header class="project_block_header">
@@ -123,14 +132,14 @@
 
             <div class="dashboard_projects" id="container">
               <div class="section" id="base">
-                <section class="projectTime__container header_dashboard">
-                  <p class="project_title">Project_1</p>
+                <section class="projectTime header_dashboard">
+                  <p class="projectTime-title">Project_1</p>
                   <p>Customers_1</p>
                   <button class="Button_base delete_btn" type="button">
                     <i class="material-icons" title="Remove Project">delete</i></button>
                 </section>
-                <div class="task_block DP" id="DP_taskBlock_1">
-                  <article class="task">
+                <div class="timeTaskBlock DP" id="DP_taskBlock_1">
+                  <article class="timeTaskBlock__task">
                     <input id="task_1" value="Task_1">
                     <section>
                       <p class="task-time"><span class="hours">00</span>:
@@ -140,7 +149,7 @@
                               type="button"><i class="material-icons">play_circle_outline</i></button>
                     </section>
                   </article>
-                  <article class="task">
+                  <article class="timeTaskBlock__task">
                     <input id="task_2" value="Task_2">
                     <section>
                       <p class="task-time"><span class="hours">00</span>:

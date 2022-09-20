@@ -36,19 +36,19 @@ main {
 }
 
 /*MAIN block*/
-.content_block {
+.content {
     display: flex;
     flex-direction: column;
     height: 100vh;
     box-sizing: border-box;
 }
 
-.container {
+.padding {
     padding: 1.5rem;
 }
 
 @media screen and (max-width: 1020px), screen and (max-height: 670px) {
-    .container {
+    .padding {
         padding: 0.5rem;
     }
 }

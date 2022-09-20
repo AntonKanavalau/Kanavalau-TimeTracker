@@ -1,7 +1,7 @@
 @import "base_style.css";
 
 /*Header block*/
-.content_block > header {
+.content > header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 670px) {
-    .content_block > header {
+    .content > header {
         padding: 0.5rem;
     }
 }
@@ -22,9 +22,9 @@ header > * {
     align-items: center;
 }
 
-.taskTitle,
-.projectName,
-.projectTime__container > p:not(.project_total-time),
+.content__header--task-title,
+.content__header--project-title,
+.projectTime > p:not(.project_total-time),
 .project_name,
 .company,
 .team {
@@ -39,7 +39,7 @@ header > * {
 }
 
 @media screen and (max-width: 670px) {
-    .content_block > header {
+    .content > header {
         height: 4rem;
     }
 }
@@ -53,7 +53,7 @@ header > * {
 }
 
 /*Project Name style*/
-.projectName {
+.content__header--project-title {
     font-weight: bold;
 }
 
@@ -63,25 +63,25 @@ header > * {
 }
 
 /*ALL time block*/
-.tracker_container {
+.tracker {
     height: 35vh;
     padding: 1.5rem;
     display: flex;
 }
 
 @media screen and (max-width: 670px) {
-    .tracker_container {
+    .tracker {
         padding: 0.5rem;
         flex-direction: column;
     }
 }
 
-.tracker_container > * {
+.tracker > * {
     display: flex;
 }
 
 /*Total time block*/
-.total-time_block {
+.tracker__totalTime {
     width: 60%;
     font-size: 2.5rem;
     flex-direction: column;
@@ -90,7 +90,7 @@ header > * {
 }
 
 @media screen and (max-width: 670px) {
-    .total-time_block {
+    .tracker__totalTime {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -100,7 +100,7 @@ header > * {
     }
 }
 
-.total-time_title {
+.totalTime__title {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
@@ -108,7 +108,7 @@ header > * {
 }
 
 /*Total time project and task*/
-div.timeProject_container {
+div.tracker__ProjectBlock {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem 1rem 2rem;
@@ -116,15 +116,8 @@ div.timeProject_container {
     overflow-y: auto;
 }
 
-div.timeProject_container > li {
-    padding: 1rem 0;
-    border-bottom: 1px solid #bbb;
-    list-style-position: inside;
-    transition: all 0.3s ease 0s;
-}
-
 /*Block project time*/
-.projectTime__container {
+.projectTime {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem 1rem 0;
@@ -134,7 +127,7 @@ div.timeProject_container > li {
     transition: all 0.3s ease 0s;
 }
 
-.projectTime__container:before {
+.projectTime:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -148,30 +141,30 @@ div.timeProject_container > li {
     transition: transform 0.25s ease-out;
 }
 
-.projectTime__container:hover:before {
+.projectTime:hover:before {
     cursor: pointer;
     transform: scaleX(1);
 }
 
 /*Project list*/
-.project_title {
+.projectTime-title {
     font-weight: 600;
 }
 
-.project_title:before {
+.projectTime-title:before {
     content: "\e5df";
     font-family: 'Material Icons';
     color: #009a00;
 }
 
 /*Task list*/
-.task_block {
+.timeTaskBlock {
     display: none;
     flex-direction: column;
     padding: 0.5rem 0;
 }
 
-.task_block > .task {
+.timeTaskBlock > .timeTaskBlock__task {
     display: flex;
     justify-content: space-between;
     padding: 0.25rem;
@@ -180,16 +173,16 @@ div.timeProject_container > li {
     transition: all 0.3s ease 0s;
 }
 
-.task_block > .task:hover {
+.timeTaskBlock > .timeTaskBlock__task:hover {
     background: rgba(33, 148, 243, 0.1);
     transition: all 0.3s ease 0s;
 }
 
-.task > * {
+.timeTaskBlock__task > * {
     display: flex;
 }
 
-.task > input {
+.timeTaskBlock__task > input {
     font-size: 1rem;
     outline: none;
     border: none;
@@ -197,7 +190,7 @@ div.timeProject_container > li {
     cursor: pointer;
 }
 
-.task > input:focus {
+.timeTaskBlock__task > input:focus {
     background: white;
     outline: 1px solid rgba(33, 148, 243);
     border-radius: 5px;
@@ -229,7 +222,7 @@ div.timeProject_container > li {
 .dashboard_block {
     display: flex;
     flex-direction: column;
-    height:calc(100% - 35vh - 4rem);
+    height: calc(100% - 35vh - 4rem);
     box-sizing: border-box;
     padding: 1.5rem;
 }
@@ -377,7 +370,7 @@ input.data:focus {
 }
 
 /*Header dashboard*/
-.header_dashboard{
+.header_dashboard {
     padding: 1rem 0;
     border-bottom: none;
 }

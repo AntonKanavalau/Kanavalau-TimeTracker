@@ -2,7 +2,7 @@ var i;
 
 /*Open task window into timeProject_container*/
 var projectTime = document.querySelectorAll('.list');
-var taskBlock = document.querySelector('.task_block')
+var taskBlock = document.querySelector('.timeTaskBlock')
 for (i = 0; i < projectTime.length; i++) {
   projectTime[i].addEventListener('click', function () {
     taskBlock.classList.toggle('open');
@@ -48,7 +48,7 @@ var taskInput1 = document.getElementById('task_1');
 var taskInput2 = document.getElementById('task_2');
 var taskTitle1 = document.querySelector('.task_1');
 var taskTitle2 = document.querySelector('.task_2');
-var taskTitle = document.querySelector('.taskTitle');
+var taskTitle = document.querySelector('.content__header--task-title');
 
 taskInput1.oninput = function () {
   taskTitle1.innerHTML = taskInput1.value;
@@ -87,13 +87,13 @@ function ValidateInfoForm() {
 
   var html = `
       <div class="section" id="${ID}">
-        <section class="projectTime__container header_dashboard">
-        <p class="project_title">${NameProjectValue}</p>
+        <section class="projectTime header_dashboard">
+        <p class="projectTime-title">${NameProjectValue}</p>
         <p class="">${CustomerValue}</p>
         <button class="Button_base" id="delete_btn" type="button">
           <i class="material-icons" title="Remove Project">delete</i></button>
         </section>
-        <div class="task_block">
+        <div class="timeTaskBlock">
           <article class="addTask">
           <i class="material-icons">add_task</i>
           <p>create new task</p>
