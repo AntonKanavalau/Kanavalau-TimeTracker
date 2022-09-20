@@ -80,6 +80,9 @@ td {
 /*Material icon*/
 i {
   padding-left: 0.2rem;
+  @media screen and (max-width: 670px) {
+    padding: 0;
+  }
 }
 
 /*Variables*/
@@ -92,14 +95,13 @@ i {
 }
 
 /*Height*/
+@hVvh: 100vh;
 .hvh {
   height: @hVvh;
-  @hVvh: 100vh;
 }
-
+@hVp: 100%;
 .hp {
   height: @hVp;
-  @hVp: 100%;
 }
 
 .textOverflow {
@@ -119,6 +121,11 @@ i {
   .df {
     display: flex;
     flex-direction: column;
+  }
+
+  .dj {
+    display: flex;
+    justify-content: space-between;
   }
 
   .daj_b {

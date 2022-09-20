@@ -219,7 +219,7 @@ div.tracker__ProjectBlock {
 }
 
 /*Block dashboard*/
-.dashboard_block {
+.dashboardBlock {
     display: flex;
     flex-direction: column;
     height: calc(100% - 35vh - 4rem);
@@ -228,13 +228,13 @@ div.tracker__ProjectBlock {
 }
 
 @media screen and (max-width: 1020px) {
-    .dashboard_block {
+    .dashboardBlock {
         padding: 0.5rem;
     }
 }
 
 @media screen and (max-width: 670px) {
-    .dashboard_block {
+    .dashboardBlock {
         padding: 0.5rem;
     }
 }
