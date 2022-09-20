@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap');
+/*base pages settings*/
+html {
+  font-size: 16px;
+  @media screen and (max-width: 670px) {
+    font-size: 0.85rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #f0f4f8;
+  font-family: 'Manrope', sans-serif;
+}
+
+main {
+  height: 100vh;
+  margin-left: 16rem;
+}
+
+@media screen and (max-width: 1020px) {
+  main {
+    margin-left: 11rem;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  main {
+    margin-left: 3rem;
+  }
+}
+
+/*MAIN block*/
+.content_block {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 1020px), screen and (max-height: 670px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease 0s;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+.material-icons {
+  display: inline-block;
+ color: #a9a9b2;
+  transition: all 0.3s ease 0s;
+}
+*/
+button {
+  outline: none;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+}
+
+td {
+  height: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*Variables*/
+@custBlue: rgb(33, 150, 243);
+
+/*Mixins*/
+#flex() {
+  .da {
+    display: flex;
+    align-items: center;
+  }
+
+  .daf {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .dfj {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .dafj {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

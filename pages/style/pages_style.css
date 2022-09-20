@@ -457,7 +457,7 @@ input.data:focus {
     padding: 0.25rem 0;
 }
 
-.profile_form > input:not(.bnt_style) {
+.profile_form > input:not(.btn_base) {
     outline: none;
     border: none;
     font-size: 1.2rem;
