@@ -6,7 +6,6 @@
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
-    <!--<link href="style/pages_style.css" rel="stylesheet">-->
     <link rel="stylesheet/less" type="text/css" href="style/page_Home.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <title>TimeTracker</title>
@@ -89,15 +88,13 @@
             </div>
           </div>
         </div>
-
         <div class="dashboard">
-          <div class="dashboard--projectBlock">
-            <header class="dashboard--projectBlock__header">
+          <div class="ContentBlock">
+            <header class="dashboard__header">
               <p>project dashboard</p>
               <p class="newProject_add">+ create new project</p>
             </header>
-
-            <div class="dashboard_projects" id="container">
+            <div class="dashboard__projectsList" id="container">
               <div class="section" id="base">
                 <section class="projectTime projectTime--header">
                   <p class="projectTime-title">Project_1</p>
@@ -175,9 +172,7 @@
         </section>
       </div>
     </div>
-
     <script src="../script/TimeTracker.js"></script>
     <script src="../script/ActivityWindow__hom-p.js"></script>
-    <!--<script src="../script/click.js"></script>-->
   </body>
 </html>

@@ -362,7 +362,7 @@ input.data:focus {
 }
 
 /*Dashboards projects*/
-.dashboard_projects {
+.dashboard__projectsList {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -432,7 +432,7 @@ input.data:focus {
 }
 
 /*Forms block*/
-.block_form {
+.formBlock {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

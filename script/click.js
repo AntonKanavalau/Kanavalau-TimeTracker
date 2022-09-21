@@ -52,14 +52,14 @@ function ValidateInfoForm() {
         </div>
       </div>
   `;
-  var dashboardProjects = document.querySelector('.dashboard_projects');
+  var dashboardProjects = document.querySelector('.dashboard__projectsList');
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   openForm.classList.remove('open');
 }
 
 
-var section = document.getElementsByClassName('dashboard_projects');
+var section = document.getElementsByClassName('dashboard__projectsList');
 var taskBlock = document.querySelector('.DP')
 for (var div of section) {
   div.addEventListener('click', () =>

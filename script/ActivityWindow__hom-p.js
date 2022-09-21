@@ -101,7 +101,7 @@ function ValidateInfoForm() {
         </div>
       </div>
   `;
-  var dashboardProjects = document.querySelector('.dashboard_projects');
+  var dashboardProjects = document.querySelector('.dashboard__projectsList');
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   openForm.classList.remove('open');

@@ -7,12 +7,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
-    <link href="style/pages_style.css" rel="stylesheet">
-    <link rel="stylesheet/less" type="text/css" href="style/navigation.less" >
+    <link rel="stylesheet/less" type="text/css" href="style/page_Profile.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   </head>
   <body>
-
     <nav class="nav">
       <a class="nav--profile" href="profile.html" title="Profile">
         <i class="material-icons nav__icon">account_circle</i>
@@ -33,16 +31,15 @@
                 name="Log out"><i class="material-icons logout">logout</i><span>Log out</span></button>
       </section>
     </nav>
-
     <main>
       <div class="content content--padding">
-        <div class="projects-list_container">
-          <header class="projectBlock__header correct_block">
+        <div class="ContentBlock">
+          <header class="ContentBlock__header">
             <button type="submit" class="add_avatar" name="Change avatar">
               <i class="material-icons icon_correction">account_circle</i></button>
             <p class="correct">login@mail.ru</p>
           </header>
-          <div class="block_form">
+          <div class="formBlock">
             <form class="profile_form" action="#">
               <label for="name">First name: </label>
               <input id="name" type="text" placeholder="Enter First name">
