@@ -7,7 +7,7 @@
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
-    <link rel="stylesheet/less" type="text/css" href="style/page_Profile.less" >
+    <link rel="stylesheet/less" type="text/css" href="style/page_Projects.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <!--<link href="style/pages_style.css" rel="stylesheet">-->
   </head>
@@ -36,8 +36,8 @@
 
     <main>
       <div class="content content--padding">
-        <div class="projects-list_container">
-          <header class="projectBlock__header">
+        <div class="ContentBlock">
+          <header class="ContentBlock__header">
             <p class="">Projects</p>
             <button class="Button_base btnAddProject" type="button" title="Add project">
               <i class="material-icons add">add_circle</i>
@@ -46,7 +46,7 @@
 
           <div class="table">
             <table>
-              <thead class="table-head">
+              <thead class="table__head">
                 <tr>
                   <th class="id">#</th>
                   <th class="project_name">name</th>
@@ -55,12 +55,12 @@
                   <th>team</th>
                 </tr>
               </thead>
-              <tbody class="table-body">
+              <tbody class="table__body">
                 <tr class="projects_list">
                   <td class="id">1</td>
                   <td class="project_name">nameProject1</td>
                   <td class="color">
-                    <div class="color_block"></div>
+                    <div class="colorBlock"></div>
                   </td>
                   <td class="company">companyName1</td>
                   <td class="team">team1</td>
@@ -94,7 +94,6 @@
         </section>
       </div>
     </div>
-
     <script src="../script/ActivityWindow__projects-p.js"></script>
   </body>
 </html>

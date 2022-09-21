@@ -52,7 +52,7 @@ function ValidateInfoForm() {
           <td class="id">1</td>
           <td class="project_name">${NameProjectValue}</td>
           <td class="color">
-            <div class="color_block"></div>
+            <div class="colorBlock"></div>
           </td>
           <td class="company">${CompanyNameValue}</td>
           <td class="team">${TeamValue}</td>

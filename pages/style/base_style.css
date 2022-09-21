@@ -344,7 +344,7 @@ table {
     background: #fff;;
 }
 
-.table-head {
+.table__head {
     height: 4rem;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -357,7 +357,7 @@ table {
     transition: all 0.3s ease 0s;
 }
 
-.color_block {
+.colorBlock {
     width: 1.2rem;
     height: 1.2rem;
     background: #fd171f;
