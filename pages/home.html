@@ -64,7 +64,6 @@
                                               <span class="TPseconds">00</span></p>
               </section>
               <div class="timeTaskBlock">
-
                 <article class="timeTaskBlock__task">
                   <p class="task_1">Task_1</p>
                   <section>
@@ -87,28 +86,26 @@
                   </section>
                 </article>
               </div>
-
             </div>
           </div>
-
         </div>
 
-
         <div class="dashboard">
-          <div class="projectBlock">
-            <header class="projectBlock__header">
+          <div class="dashboard--projectBlock">
+            <header class="dashboard--projectBlock__header">
               <p>project dashboard</p>
               <p class="newProject_add">+ create new project</p>
             </header>
 
             <div class="dashboard_projects" id="container">
               <div class="section" id="base">
-                <section class="projectTime header_dashboard">
+                <section class="projectTime projectTime--header">
                   <p class="projectTime-title">Project_1</p>
                   <p>Customers_1</p>
                   <button class="Button_base delete_btn" type="button">
                     <i class="material-icons" title="Remove Project">delete</i></button>
                 </section>
+
                 <div class="timeTaskBlock DP" id="DP_taskBlock_1">
                   <article class="timeTaskBlock__task">
                     <input id="task_1" value="Task_1">
@@ -130,56 +127,54 @@
                               type="button"><i class="material-icons">play_circle_outline</i></button>
                     </section>
                   </article>
-                  <article class="addTask">
+                  <article class="timeTaskBlock__addTask">
                     <i class="material-icons">add_task</i>
                     <p>create new task</p>
                   </article>
                 </div>
               </div>
             </div>
-
-            <div class="addForm">
-              <div class="form_block">
-                <section class="title">
-                  <p>creating new project</p>
-                  <i class="material-icons close">close</i>
-                </section>
-                <section class="form">
-                  <form name="addProject" id="addProject">
-                    <label>
-                      <input class="data" type="text" name="name_project" placeholder="Name your project">
-                    </label>
-                    <label>
-                      <input class="data" type="text" name="customer" placeholder="Customer">
-                    </label>
-                    <button class="Button_base decline close" type="button">decline</button>
-                    <button class="Button_base create">create</button>
-                  </form>
-                </section>
-              </div>
-            </div>
-            <div class="addForm addForm--task">
-              <div class="form_block">
-                <section class="title">
-                  <p>creating new task</p>
-                  <i class="material-icons close">close</i>
-                </section>
-                <section class="form">
-                  <form name="addTask">
-                    <label>
-                      <input class="data" type="text" name="name_task" placeholder="Name your task">
-                    </label>
-                    <button class="Button_base decline close" type="button">decline</button>
-                    <button class="Button_base create">create</button>
-                  </form>
-                </section>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </main>
+    <div class="addForm">
+      <div class="form_block">
+        <section class="title">
+          <p>creating new project</p>
+          <i class="material-icons close">close</i>
+        </section>
+        <section class="form">
+          <form name="addProject" id="addProject">
+            <label>
+              <input class="data" type="text" name="name_project" placeholder="Name your project">
+            </label>
+            <label>
+              <input class="data" type="text" name="customer" placeholder="Customer">
+            </label>
+            <button class="Button_base decline close" type="button">decline</button>
+            <button class="Button_base create">create</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <div class="addForm addForm--task">
+      <div class="form_block">
+        <section class="title">
+          <p>creating new task</p>
+          <i class="material-icons close">close</i>
+        </section>
+        <section class="form">
+          <form name="addTask">
+            <label>
+              <input class="data" type="text" name="name_task" placeholder="Name your task">
+            </label>
+            <button class="Button_base decline close" type="button">decline</button>
+            <button class="Button_base create">create</button>
+          </form>
+        </section>
+      </div>
+    </div>
 
     <script src="../script/TimeTracker.js"></script>
     <script src="../script/ActivityWindow__hom-p.js"></script>

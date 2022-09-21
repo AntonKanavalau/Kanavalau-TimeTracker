@@ -196,7 +196,7 @@ div.tracker__ProjectBlock {
     border-radius: 5px;
 }
 
-.addTask {
+.timeTaskBlock__addTask {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,12 +206,12 @@ div.tracker__ProjectBlock {
     transition: all 0.3s ease 0s;
 }
 
-.addTask > i {
+.timeTaskBlock__addTask > i {
     font-size: 1rem;
     margin-right: .5rem;
 }
 
-.addTask:hover > * {
+.timeTaskBlock__addTask:hover > * {
     cursor: pointer;
     font-size: 1.05rem;
     color: #2194f3;
@@ -240,7 +240,7 @@ div.tracker__ProjectBlock {
 }
 
 /*Project dashboard block*/
-.projectBlock {
+.dashboard--projectBlock {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -370,12 +370,12 @@ input.data:focus {
 }
 
 /*Header dashboard*/
-.header_dashboard {
+.projectTime--header {
     padding: 1rem 0;
     border-bottom: none;
 }
 
-.header_dashboard > p {
+.projectTime--header > p {
     max-width: 35vw;
 }
 

@@ -45,7 +45,6 @@
   }
 
   /*Total time block*/
-
   &__totalTime {
     width: 60%;
     font-size: 2.5rem;
@@ -70,7 +69,6 @@
   }
 
   /*Total time project and task*/
-
   &__ProjectBlock {
     width: 100%;
     box-sizing: border-box;
@@ -116,30 +114,13 @@
       color: #009a00;
     }
   }
-}
 
-.timeTaskBlock {
-  display: none;
-  flex-direction: column;
-  padding: 0.5rem 0;
-
-  &__task {
-    #flex > .dj_b;
-    padding: 0.25rem;
-    margin-left: 1rem;
-    border-bottom: 1px solid #f0f4f8;
-    transition: all 0.3s ease 0s;
-
-    & > * {
-      #flex > .da;
-    }
-
-    &:hover {
-      background: fade(@custBlue, 10%);
-      transition: all 0.3s ease 0s;
-    }
+  &--header {
+    padding: 1rem 0;
+    border-bottom: none;
   }
 }
+
 
 .dashboard {
   #flex > .df;
@@ -150,41 +131,100 @@
   @media screen and (max-width: 1020px) {
     padding: 0 0.5rem 0.5rem 0.5rem;
   }
+
+  &--projectBlock {
+    #flex > .df;
+    .hp;
+    box-sizing: border-box;
+    padding: 1.1rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e3e6e8ff;
+    border-radius: 5px;
+
+    &__header {
+      #flex > .dj_b;
+      z-index: 98;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #bbb;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 1.15rem;
+
+      .newProject_add {
+        color: @custBlue;
+        padding-right: 1.5rem;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+        }
+
+        @media screen and (max-width: 770px) {
+          text-align: right;
+        }
+      }
+    }
+  }
 }
 
-.projectBlock {
-  #flex > .df;
-  .hp;
-  box-sizing: border-box;
-  padding: 1.1rem;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e3e6e8ff;
-  border-radius: 5px;
 
-  &__header {
+.timeTaskBlock {
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0;
+
+  &__task {
     #flex > .dj_b;
-    z-index: 98;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #bbb;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 1.15rem;
+    padding: 0.25rem;
+    margin-left: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+    transition: all 0.3s ease 0s;
 
-    .newProject_add {
-      color: @custBlue;
-      padding-right: 1.5rem;
+    & > * {
+      #flex > .da;
+    }
+
+    &:hover {
+      background: fade(@custBlue, 10%);
       transition: all 0.3s ease 0s;
+    }
 
-      &:hover {
-        opacity: 0.5;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-      }
+    input {
+      font-size: 1rem;
+      outline: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
 
-      @media screen and (max-width: 770px) {
-        text-align: right;
+      &:focus {
+        background: white;
+        outline: 1px solid @custBlue;
+        border-radius: 5px;
       }
+    }
+  }
+
+  &__addTask {
+    #flex > .da;
+    justify-content: center;
+    margin: 1rem;
+    text-transform: uppercase;
+    color: #a9a9b2;
+    transition: all 0.3s ease 0s;
+
+    i {
+      font-size: 1rem;
+      margin-right: .5rem;
+    }
+
+    &:hover > * {
+      cursor: pointer;
+      font-size: 1.05rem;
+      color: @custBlue;
+      transition: all 0.3s ease 0s;
     }
   }
 }

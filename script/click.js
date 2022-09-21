@@ -38,14 +38,14 @@ function ValidateInfoForm() {
 
   var html = `
       <div class="section" id="">
-        <section class="projectTime header_dashboard">
+        <section class="projectTime projectTime--header">
         <p class="projectTime-title">${NameProjectValue}</p>
         <p class="">${CustomerValue}</p>
         <button class="Button_base delete_btn" type="button">
           <i class="material-icons" title="Remove Project">delete</i></button>
         </section>
         <div class="timeTaskBlock DP">
-          <article class="addTask">
+          <article class="timeTaskBlock__addTask">
           <i class="material-icons">add_task</i>
           <p>create new task</p>
           </article>
