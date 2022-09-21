@@ -219,7 +219,7 @@ div.tracker__ProjectBlock {
 }
 
 /*Block dashboard*/
-.dashboardBlock {
+.dashboard {
     display: flex;
     flex-direction: column;
     height: calc(100% - 35vh - 4rem);
@@ -228,19 +228,19 @@ div.tracker__ProjectBlock {
 }
 
 @media screen and (max-width: 1020px) {
-    .dashboardBlock {
+    .dashboard {
         padding: 0.5rem;
     }
 }
 
 @media screen and (max-width: 670px) {
-    .dashboardBlock {
+    .dashboard {
         padding: 0.5rem;
     }
 }
 
 /*Project dashboard block*/
-.project_block {
+.projectBlock {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -253,7 +253,7 @@ div.tracker__ProjectBlock {
 }
 
 /*ADD project*/
-.addProject_form, .addTask_form {
+.addForm {
     display: none;
     align-items: center;
     justify-content: center;
@@ -350,7 +350,7 @@ input.data:focus {
 }
 
 /*Header dashboard*/
-.project_block_header {
+.projectBlock__header {
     display: flex;
     justify-content: space-between;
     z-index: 98;

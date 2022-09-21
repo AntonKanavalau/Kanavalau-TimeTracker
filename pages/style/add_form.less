@@ -1,0 +1,95 @@
+@import "base";
+
+/*ADD form*/
+.addForm {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 900;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.open {
+  display: flex !important;
+}
+
+.form_block {
+  width: 40vw;
+  max-width: 30rem;
+  min-width: 250px;
+  max-height: calc(@hVp - 4rem);
+  #flex > .df;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+  #flex > .daj_b;
+  height: 3rem;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #e8e8e8;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.form {
+  padding: 0.5rem 3rem;
+  text-align: right;
+
+  .decline, .create {
+    text-transform: uppercase;
+    color: #adadad;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .create {
+    color: @custBlue;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      .op_trans;
+    }
+  }
+}
+
+.close {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    color: black;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+input.data {
+  box-sizing: border-box;
+  width: 100%;
+  color: #5d5d5d;
+  border: 1px solid #e3e6e8ff;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  text-align: center;
+  background: #fff;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid fade(@custBlue, 50%);
+  }
+
+  &:focus {
+    outline: 1px solid @custBlue;
+    border-radius: 40px;
+    transition: all 0.3s ease 0s;
+  }
+}
+

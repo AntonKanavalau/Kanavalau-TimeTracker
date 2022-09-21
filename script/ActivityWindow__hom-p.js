@@ -11,7 +11,7 @@ for (i = 0; i < projectTime.length; i++) {
 
 /*Open windows create new projects (home pages)*/
 var newProjectAdd = document.querySelector(".newProject_add");
-var openForm = document.querySelector(".addProject_form");
+var openForm = document.querySelector(".addForm");
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });
@@ -27,7 +27,7 @@ for (i = 0; i < projectBlockContainer.length; i++) {
 
 /*Open window create new task*/
 var addTask = document.querySelector(".addTask");
-var addTaskForm = document.querySelector(".addTask_form");
+var addTaskForm = document.querySelector(".addForm--task");
 addTask.addEventListener('click', function () {
   addTaskForm.classList.add('open');
   FormElement.reset();

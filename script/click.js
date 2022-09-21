@@ -3,7 +3,7 @@
 
 /*Open windows create new projects (home pages)*/
 var newProjectAdd = document.querySelector(".newProject_add");
-var openForm = document.querySelector(".addProject_form");
+var openForm = document.querySelector(".addForm");
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });

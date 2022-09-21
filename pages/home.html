@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
     <!--<link href="style/pages_style.css" rel="stylesheet">-->
-    <link rel="stylesheet/less" type="text/css" href="style/navigation.less" >
     <link rel="stylesheet/less" type="text/css" href="style/page_Home.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <title>TimeTracker</title>
@@ -95,34 +94,12 @@
         </div>
 
 
-        <div class="dashboardBlock">
-          <div class="project_block">
-            <header class="project_block_header">
+        <div class="dashboard">
+          <div class="projectBlock">
+            <header class="projectBlock__header">
               <p>project dashboard</p>
               <p class="newProject_add">+ create new project</p>
             </header>
-
-            <div class="addProject_form">
-              <div class="form_block">
-                <section class="title">
-                  <p>creating new project</p>
-                  <i class="material-icons close">close</i>
-                </section>
-                <section class="form">
-                  <form name="addProject" id="addProject">
-                    <label>
-                      <input class="data" type="text" name="name_project" placeholder="Name your project">
-                    </label>
-                    <label>
-                      <input class="data" type="text" name="customer" placeholder="Customer">
-                    </label>
-                    <button class="Button_base decline close" type="button">decline</button>
-                    <button class="Button_base create">create</button>
-                  </form>
-                </section>
-              </div>
-            </div>
-
 
             <div class="dashboard_projects" id="container">
               <div class="section" id="base">
@@ -161,7 +138,27 @@
               </div>
             </div>
 
-            <div class="addTask_form">
+            <div class="addForm">
+              <div class="form_block">
+                <section class="title">
+                  <p>creating new project</p>
+                  <i class="material-icons close">close</i>
+                </section>
+                <section class="form">
+                  <form name="addProject" id="addProject">
+                    <label>
+                      <input class="data" type="text" name="name_project" placeholder="Name your project">
+                    </label>
+                    <label>
+                      <input class="data" type="text" name="customer" placeholder="Customer">
+                    </label>
+                    <button class="Button_base decline close" type="button">decline</button>
+                    <button class="Button_base create">create</button>
+                  </form>
+                </section>
+              </div>
+            </div>
+            <div class="addForm addForm--task">
               <div class="form_block">
                 <section class="title">
                   <p>creating new task</p>
@@ -178,6 +175,7 @@
                 </section>
               </div>
             </div>
+
           </div>
         </div>
       </div>
