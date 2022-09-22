@@ -108,8 +108,7 @@ function ValidateInfoForm() {
 }
 
 /*Get inputData add task*/
-/*
-var FormElement = document.forms['addTask'];
+/*var FormElement = document.forms['addTask'];
 FormElement.onsubmit = ValidateInfoForm;
 event.preventDefault();
 create.addEventListener('click', ValidateInfoForm)
