@@ -1,6 +1,6 @@
 /*Open windows create new projects (home pages)*/
 var newProjectAdd = document.querySelector(".btnAddProject");
-var openForm = document.querySelector(".addProject_form");
+var openForm = document.querySelector(".addForm");
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
   FormElement.reset();
@@ -52,7 +52,7 @@ function ValidateInfoForm() {
           <td class="id">1</td>
           <td class="project_name">${NameProjectValue}</td>
           <td class="color">
-            <div class="color_block"></div>
+            <div class="colorBlock"></div>
           </td>
           <td class="company">${CompanyNameValue}</td>
           <td class="team">${TeamValue}</td>

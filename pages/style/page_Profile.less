@@ -1,0 +1,47 @@
+@import "base";
+@import "navigation";
+
+.formBlock {
+  #flex > .dfj_b;
+  .hp;
+}
+
+.profile_form {
+  #flex > .df;
+  align-items: flex-start;
+
+  label {
+    color: #2c2c2c;
+    padding: 0.25rem 0;
+  }
+
+  input {
+    &:not(.btn_base) {
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+      color: rgb(117, 117, 117);
+      padding-bottom: 1.2rem;
+    }
+
+    &:not(#birth) {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/*Forgot password*/
+.retrieve {
+  color: @custBlue;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    .op_trans;
+  }
+}

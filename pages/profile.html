@@ -7,40 +7,39 @@
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
-    <link href="style/pages_style.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="style/page_Profile.less" >
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   </head>
   <body>
-    <nav class="home-nav">
-      <a href="profile.html" title="Profile">
-        <section class="nav-profile_block">
-          <i class="material-icons nav-icon-correction">account_circle</i>
-          <p class="nav-login" title="login@mail.ru">login@mail.ru</p>
-        </section>
+    <nav class="nav">
+      <a class="nav--profile" href="profile.html" title="Profile">
+        <i class="material-icons nav__icon">account_circle</i>
+        <p class="nav__login" title="login@mail.ru">login@mail.ru</p>
       </a>
-      <section class="nav-block">
-        <ul class="nav_list">
-          <li><a class="nav_link" href="home.html" title="Tracker"><i class="material-icons">timer</i>
+      <section class="nav--block">
+        <ul class="link-list">
+          <li><a class="link-list__link" href="home.html" title="Tracker"><i class="material-icons">timer</i>
             <span>Tracker</span></a></li>
-          <li><a class="nav_link" href="projects.html" title="Projects"><i class="material-icons">apps</i>
+          <li><a class="link-list__link" href="projects.html" title="Projects"><i class="material-icons">apps</i>
             <span>Projects</span></a></li>
-          <li><a class="nav_link" href="customers.html" title="Customers"><i class="material-icons">perm_identity</i>
+          <li><a class="link-list__link" href="customers.html" title="Customers"><i class="material-icons">perm_identity</i>
             <span>Customers</span></a></li>
-          <li><a class="nav_link" href="team.html" title="Team"><i class="material-icons">people</i>
+          <li><a class="link-list__link" href="team.html" title="Team"><i class="material-icons">people</i>
             <span>Team</span></a></li>
         </ul>
-        <button type="submit" class="bnt_style" onclick="location.href='../index.html'"
+        <button type="submit" class="btn_base" onclick="location.href='../index.html'"
                 name="Log out"><i class="material-icons logout">logout</i><span>Log out</span></button>
       </section>
     </nav>
     <main>
-      <div class="content_block container">
-        <div class="projects-list_container">
-          <header class="project_block_header correct_block">
+      <div class="content content--padding">
+        <div class="ContentBlock">
+          <header class="ContentBlock__header">
             <button type="submit" class="add_avatar" name="Change avatar">
               <i class="material-icons icon_correction">account_circle</i></button>
-            <p class="correct">login@mail.ru</p>
+            <p class="ContentBlock__header--mail">login@mail.ru</p>
           </header>
-          <div class="block_form">
+          <div class="formBlock">
             <form class="profile_form" action="#">
               <label for="name">First name: </label>
               <input id="name" type="text" placeholder="Enter First name">
@@ -50,7 +49,7 @@
               <input id="birth" type="date" placeholder="Birth data (optionl)">
               <label for="phone">Phone </label>
               <input id="phone" type="text" placeholder="Phone (optionl)">
-              <input class="bnt_style" type="button" value="Update">
+              <input class="btn_base" type="button" value="Update">
             </form>
             <a class="retrieve" href="#" title="Retrieve password">forgot password</a>
           </div>

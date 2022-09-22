@@ -2,7 +2,7 @@ var i;
 
 /*Open task window into timeProject_container*/
 var projectTime = document.querySelectorAll('.list');
-var taskBlock = document.querySelector('.task_block')
+var taskBlock = document.querySelector('.timeTaskBlock')
 for (i = 0; i < projectTime.length; i++) {
   projectTime[i].addEventListener('click', function () {
     taskBlock.classList.toggle('open');
@@ -11,13 +11,13 @@ for (i = 0; i < projectTime.length; i++) {
 
 /*Open windows create new projects (home pages)*/
 var newProjectAdd = document.querySelector(".newProject_add");
-var openForm = document.querySelector(".addProject_form");
+var openForm = document.querySelector(".addForm");
 newProjectAdd.addEventListener('click', function () {
   openForm.classList.add('open');
 });
 
 /*Open task window into dashboard_projects*/
-var projectBlockContainer = document.querySelectorAll('.header_dashboard');
+var projectBlockContainer = document.querySelectorAll('.projectTime--header');
 var DPtaskBlock = document.getElementById('DP_taskBlock_1');
 for (i = 0; i < projectBlockContainer.length; i++) {
   projectBlockContainer[i].addEventListener('click', function () {
@@ -26,8 +26,8 @@ for (i = 0; i < projectBlockContainer.length; i++) {
 }
 
 /*Open window create new task*/
-var addTask = document.querySelector(".addTask");
-var addTaskForm = document.querySelector(".addTask_form");
+var addTask = document.querySelector(".timeTaskBlock__addTask");
+var addTaskForm = document.querySelector(".addForm--task");
 addTask.addEventListener('click', function () {
   addTaskForm.classList.add('open');
   FormElement.reset();
@@ -48,7 +48,7 @@ var taskInput1 = document.getElementById('task_1');
 var taskInput2 = document.getElementById('task_2');
 var taskTitle1 = document.querySelector('.task_1');
 var taskTitle2 = document.querySelector('.task_2');
-var taskTitle = document.querySelector('.taskTitle');
+var taskTitle = document.querySelector('.content__header--task-title');
 
 taskInput1.oninput = function () {
   taskTitle1.innerHTML = taskInput1.value;
@@ -87,21 +87,21 @@ function ValidateInfoForm() {
 
   var html = `
       <div class="section" id="${ID}">
-        <section class="projectTime__container header_dashboard">
-        <p class="project_title">${NameProjectValue}</p>
+        <section class="projectTime projectTime--header">
+        <p class="projectTime-title">${NameProjectValue}</p>
         <p class="">${CustomerValue}</p>
         <button class="Button_base" id="delete_btn" type="button">
           <i class="material-icons" title="Remove Project">delete</i></button>
         </section>
-        <div class="task_block">
-          <article class="addTask">
+        <div class="timeTaskBlock">
+          <article class="timeTaskBlock__addTask">
           <i class="material-icons">add_task</i>
           <p>create new task</p>
           </article>
         </div>
       </div>
   `;
-  var dashboardProjects = document.querySelector('.dashboard_projects');
+  var dashboardProjects = document.querySelector('.dashboard__projectsList');
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   openForm.classList.remove('open');

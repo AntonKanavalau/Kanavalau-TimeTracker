@@ -1,0 +1,151 @@
+@import "base";
+
+/*NAV block style*/
+.material-icons {
+  display: inline-block;
+  color: #a9a9b2;
+  transition: all 0.3s ease 0s;
+}
+
+.nav {
+  width: 16rem;
+  .hvh;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 100;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.18) 0 4px 18px;
+
+  @media screen and (max-width: 1020px) {
+    width: 11rem;
+  }
+
+  @media screen and (max-width: 670px) {
+    width: 3rem;
+  }
+
+  &--profile {
+    height: 7.75rem;
+    #flex > .dfj_e;
+    padding: 0.625rem;
+    background: linear-gradient(-45deg, #2196f3ff, #56ccf2ff, #23a6d5, #23d5ab);
+    text-align: center;
+    color: #fff;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    transition: all 0.3s ease 0s;
+
+    @media screen and (max-width: 670px) {
+      padding: 0;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      background-size: 200% 200%;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: #fff;
+
+    @media screen and (max-width: 670px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__login {
+    margin: 0;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: 670px) {
+      display: none;
+    }
+  }
+
+  /*Site navigation list*/
+
+  &--block {
+    height: calc(@hVvh - 9.75rem);
+    #flex > .daf_cj_b;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+
+    @media screen and (max-width: 670px) {
+      padding: 0.3rem;
+    }
+
+    & > * {
+      @media screen and (max-width: 670px) {
+        #flex > .daf_c;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+.link-list {
+  width: 100%;
+
+  li {
+    font-weight: 400;
+    padding: 0.7rem 0;
+
+    &:first-child {
+      line-height: 3rem;
+      border-bottom: 1px solid #bbb;
+    }
+
+    &:hover * {
+      color: @custBlue;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__link {
+    #flex > .da;
+
+    span {
+      @media screen and (max-width: 670px) {
+        display: none;
+      }
+    }
+
+    i {
+      padding-right: 1rem;
+
+      @media screen and (max-width: 670px) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.active {
+  color: @custBlue;
+}
+
+.logout {
+  @media screen and (min-width: 670px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 670px) {
+    padding: 0.1rem;
+    color: white;
+  }
+}
