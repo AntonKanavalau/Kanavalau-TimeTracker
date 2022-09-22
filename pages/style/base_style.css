@@ -309,7 +309,7 @@ a.link-list__link > i {
 }
 
 /*Style title*/
-.correct {
+.ContentBlock__header--mail {
     font-size: 2rem;
     font-weight: bold;
 }

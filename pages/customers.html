@@ -7,12 +7,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet">
-    <link href="style/pages_style.css" rel="stylesheet">
-    <link rel="stylesheet/less" type="text/css" href="style/navigation.less" >
+    <link rel="stylesheet/less" type="text/css" href="style/page_Customers.less" >
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   </head>
   <body>
-
     <nav class="nav">
       <a class="nav--profile" href="profile.html" title="Profile">
         <i class="material-icons nav__icon">account_circle</i>
@@ -33,26 +31,25 @@
                 name="Log out"><i class="material-icons logout">logout</i><span>Log out</span></button>
       </section>
     </nav>
-
     <main>
       <div class="content content--padding">
-        <div class="projects-list_container">
-          <header class="projectBlock__header">
-            <p class="correct">Customers</p>
-            <button class="Button_base" type="button" title="Add project">
+        <div class="ContentBlock">
+          <header class="ContentBlock__header">
+            <p class="ContentBlock__header--title">Customers</p>
+            <button class="Button_base btnAddProject" type="button" title="Add project">
               <i class="material-icons add">add_circle</i>
             </button>
           </header>
           <div class="table">
             <table>
-              <thead class="table-head">
+              <thead class="table__head">
                 <tr>
                   <th class="id">#</th>
                   <th class="company">company name</th>
                   <th class="project_name">projects</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="table__body">
                 <tr class="projects_list">
                   <td class="id">1</td>
                   <td class="company">companyName1</td>

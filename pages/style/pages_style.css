@@ -413,7 +413,7 @@ input.data:focus {
 }
 
 /*Login style*/
-.correct {
+.ContentBlock__header--mail {
     font-size: 1.5rem;
     font-weight: normal;
     text-transform: none;
@@ -421,7 +421,7 @@ input.data:focus {
     color: #2c2c2c;
 }
 
-.correct:hover {
+.ContentBlock__header--mail:hover {
     text-decoration: underline;
 }
 

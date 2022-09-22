@@ -151,9 +151,30 @@ input::-moz-placeholder {
       text-transform: none;
       cursor: pointer;
       color: #2c2c2c;
+    }
 
-      &.correct:hover {
-        text-decoration: underline;
+    &--mail:hover {
+      text-decoration: underline;
+    }
+
+    &--title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+/*Correction to Projects, Customers, Team - pages*/
+.headerContentCorrection {
+  .ContentBlock {
+    &__header {
+      justify-content: space-between;
+
+      i {
+        margin: 0;
+        padding-right: 1.5rem;
+        font-size: 3rem;
+        color: #2195f2;
       }
     }
   }
