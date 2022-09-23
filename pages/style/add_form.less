@@ -1,5 +1,3 @@
-@import "base";
-
 /*ADD form*/
 .addForm {
   display: none;
@@ -17,8 +15,8 @@
 
 .form_block {
   width: 40vw;
-  max-width: 30rem;
-  min-width: 250px;
+  max-width: 27.5rem;
+  min-width: 20rem;
   max-height: calc(@hVp - 4rem);
   #flex > .df;
   background-color: #fff;
@@ -40,6 +38,10 @@
 .form {
   padding: 0.5rem 3rem;
   text-align: right;
+
+  @media screen and (max-width: 670px) {
+    padding: 0.5rem 1rem;
+  }
 
   &__button {
     padding: 0.5rem 0;
