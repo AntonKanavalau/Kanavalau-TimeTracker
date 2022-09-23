@@ -1,3 +1,5 @@
+var i;
+
 /*Open windows create new projects (home pages)*/
 var newProjectAdd = document.querySelector(".btnAddProject");
 var openForm = document.querySelector(".addForm");
@@ -8,9 +10,10 @@ newProjectAdd.addEventListener('click', function () {
 
 /*Close window creates*/
 var close = document.querySelectorAll(".close");
-for (var i = 0; i < close.length; i++) {
+for ( i = 0; i < close.length; i++) {
   close[i].addEventListener('click', function () {
     openForm.classList.remove('open');
+    ColorForm.classList.remove('open');
   });
 }
 
@@ -60,4 +63,13 @@ function ValidateInfoForm() {
   tableBody.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   openForm.classList.remove('open');
+}
+
+/*Open window change color*/
+var colorBlock = document.querySelectorAll(".color");
+var ColorForm = document.querySelector(".addForm--color");
+for ( i = 0; i < close.length; i++) {
+  colorBlock[i].addEventListener('click', function () {
+    ColorForm.classList.add('open');
+  });
 }

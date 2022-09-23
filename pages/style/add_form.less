@@ -41,19 +41,23 @@
   padding: 0.5rem 3rem;
   text-align: right;
 
-  .decline, .create {
-    text-transform: uppercase;
-    color: #adadad;
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
+  &__button {
+    padding: 0.5rem 0;
 
-  .create {
-    color: @custBlue;
-    transition: all 0.3s ease 0s;
+    .decline, .create {
+      text-transform: uppercase;
+      color: #adadad;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
 
-    &:hover {
-      .op_trans;
+    .create {
+      color: @custBlue;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        .op_trans;
+      }
     }
   }
 }
