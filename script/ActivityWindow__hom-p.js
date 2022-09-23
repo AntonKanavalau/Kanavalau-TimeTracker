@@ -45,9 +45,9 @@ for (i = 0; i < close.length; i++) {
 
 /*Get task title data*/
 var taskInput1 = document.getElementById('task_1');
-var taskInput2 = document.getElementById('task_2');
+/*var taskInput2 = document.getElementById('task_2');*/
 var taskTitle1 = document.querySelector('.task_1');
-var taskTitle2 = document.querySelector('.task_2');
+/*var taskTitle2 = document.querySelector('.task_2');*/
 var taskTitle = document.querySelector('.content__header--task-title');
 
 taskInput1.oninput = function () {
@@ -55,12 +55,12 @@ taskInput1.oninput = function () {
   taskTitle.innerHTML = taskInput1.value;
 };
 
-taskInput2.oninput = function () {
+/*taskInput2.oninput = function () {
   taskTitle2.innerHTML = taskInput2.value;
-};
+};*/
 
 /*Get inputData add project*/
-var FormElement = document.forms['addProject'];
+/*var FormElement = document.forms['addProject'];
 FormElement.onsubmit = ValidateInfoForm;
 
 function ValidateInfoForm() {
@@ -83,10 +83,9 @@ function ValidateInfoForm() {
     return false;
   }
 
-  var ID = 0;
 
   var html = `
-      <div class="section" id="${ID}">
+      <div class="section" id="">
         <section class="projectTime projectTime--header">
         <p class="projectTime-title">${NameProjectValue}</p>
         <p class="">${CustomerValue}</p>
@@ -101,11 +100,22 @@ function ValidateInfoForm() {
         </div>
       </div>
   `;
+
   var dashboardProjects = document.querySelector('.dashboard__projectsList');
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   openForm.classList.remove('open');
-}
+}*/
+
+/*Add id by click*/
+/*var ID = 0;
+
+if(FormElement.onclick) {
+  ID++;
+  return true;
+} else {
+  return false;
+}*/
 
 /*Get inputData add task*/
 /*var FormElement = document.forms['addTask'];

@@ -57,9 +57,9 @@
                   <td class="id">1</td>
                   <td class="project_name">name</td>
                   <td class="position">position</td>
-                  <td class="e-mail">e-mail</td>
-                  <td class="phone">phone</td>
-                  <td class="date">dd/mm/yyyy</td>
+                  <td class="e-mail"><input type="email" name="email" placeholder="e-Mail (optionl)"></td>
+                  <td class="phone"><input type="text" placeholder="Phone (optionl)"></td>
+                  <td class="date"><input type="date" placeholder="Birth data (optionl)"></td>
                 </tr>
               </tbody>
             </table>
@@ -76,13 +76,13 @@
         <section class="form">
           <form name="addProject" id="addProject">
             <label>
-              <input class="data" type="text" name="name_project" placeholder="Name your project">
+              <input class="data" type="text" name="name" placeholder="Name">
             </label>
             <label>
-              <input class="data" type="text" name="company_name" placeholder="Company name">
+              <input class="data" type="text" name="position" placeholder="Position">
             </label>
             <label>
-              <input class="data" type="text" name="team" placeholder="Team">
+              <input class="data" type="text" name="eMail" placeholder="e-Mail">
             </label>
             <button class="Button_base decline close" type="button">decline</button>
             <button class="Button_base create">create</button>
@@ -90,6 +90,6 @@
         </section>
       </div>
     </div>
-    <script src="../script/ActivityWindow__projects-p.js"></script>
+    <script src="../script/ActivityWindow__team-p.js"></script>
   </body>
 </html>

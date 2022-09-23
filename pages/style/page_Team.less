@@ -3,4 +3,27 @@
 @import "table";
 @import "add_form";
 
+/*input::-webkit-input-placeholder {
+  color: black;
+}
+
+input::-moz-placeholder {
+  color: black;
+}*/
+
 .headerContentCorrection;
+
+input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+
+  &:not([type="date"]) {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

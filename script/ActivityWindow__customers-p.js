@@ -21,13 +21,11 @@ FormElement.onsubmit = ValidateInfoForm;
 function ValidateInfoForm() {
   event.preventDefault();
   var FormElement = document.forms['addProject'];
-  var NameProjectElement = FormElement.elements['name_project'];
   var CompanyNameElement = FormElement.elements['company_name'];
-  var TeamElement = FormElement.elements['team'];
+  var NameProjectElement = FormElement.elements['projects_name'];
 
   var NameProjectValue = NameProjectElement.value;
   var CompanyNameValue = CompanyNameElement.value;
-  var TeamValue = TeamElement.value;
 
   if (NameProjectValue.length === 0) {
     alert('Please fill Name Project');
@@ -39,22 +37,14 @@ function ValidateInfoForm() {
     CompanyNameElement.focus();
     return false;
   }
-  if (TeamValue.length === 0) {
-    alert('Please fill Team');
-    TeamElement.focus();
-    return false;
-  }
+
 
   var html = `
-        <tr class="projects_list">
-          <td class="id">1</td>
-          <td class="project_name">${NameProjectValue}</td>
-          <td class="color">
-            <div class="colorBlock"></div>
-          </td>
-          <td class="company">${CompanyNameValue}</td>
-          <td class="team">${TeamValue}</td>
-        </tr>
+      <tr class="projects_list">
+        <td class="id">1</td>
+        <td class="company">${CompanyNameValue}</td>
+        <td class="project_name">${NameProjectValue}</td>
+      </tr>
   `;
   var tableBody = document.querySelector('.table__body');
   tableBody.insertAdjacentHTML('beforeend', html);

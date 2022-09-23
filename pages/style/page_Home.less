@@ -19,6 +19,7 @@
     }
 
     &--project-title {
+      position: static;
       font-weight: bold;
       .textOverflow;
     }
@@ -120,6 +121,12 @@
   &-title {
     font-weight: 600;
 
+    &.open:before{
+      content: "\e5c5";
+      font-family: 'Material Icons';
+      color: #009a00;
+    }
+
     &:before {
       content: "\e5df";
       font-family: 'Material Icons';
@@ -169,13 +176,15 @@
       }
     }
   }
+
+  &__projectsList {
+    #flex > .df;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
 }
 
-&__projectsList {
-  #flex > .df;
-  box-sizing: border-box;
-  overflow-y: auto;
-}
+
 
 
 .timeTaskBlock {
