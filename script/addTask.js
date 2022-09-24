@@ -1,3 +1,32 @@
+var i;
+
+/*Open task window into dashboard_projects*/
+var projectBlockContainer = document.querySelectorAll('.projectTime--header');
+var DPtaskBlock = document.getElementById('DP_taskBlock_1');
+for (i = 0; i < projectBlockContainer.length; i++) {
+  projectBlockContainer[i].addEventListener('click', function () {
+    DPtaskBlock.classList.toggle('open');
+  });
+}
+
+/*Open window create new task*/
+var addTask = document.querySelector(".timeTaskBlock__addTask");
+var addTaskForm = document.querySelector(".addForm--task");
+addTask.addEventListener('click', function () {
+  addTaskForm.classList.add('open');
+  FormElement.reset();
+});
+
+/*Close window creates*/
+var close = document.querySelectorAll(".close");
+for (i = 0; i < close.length; i++) {
+  close[i].addEventListener('click', function () {
+    openForm.classList.remove('open');
+    addTaskForm.classList.remove('open');
+    FormElement.reset();
+  });
+}
+
 /*Open windows create new projects (home pages)*/
 var FormElement = document.forms['addProject'];
 FormElement.onsubmit = ValidateInfoForm;
@@ -44,6 +73,3 @@ function ValidateInfoForm() {
   FormElement.reset();
   openForm.classList.remove('open');
 }
-
-
-

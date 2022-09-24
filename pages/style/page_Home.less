@@ -49,6 +49,7 @@
   }
 
   /*Total time block*/
+
   &__totalTime {
     width: 60%;
     font-size: 2.5rem;
@@ -73,6 +74,7 @@
   }
 
   /*Total time project and task*/
+
   &__ProjectBlock {
     width: 100%;
     box-sizing: border-box;
@@ -120,7 +122,7 @@
   &-title {
     font-weight: 600;
 
-    &.open:before{
+    &.open:before {
       content: "\e5c5";
       font-family: 'Material Icons';
       color: #009a00;
@@ -165,26 +167,22 @@
       transition: all 0.3s ease 0s;
 
       &:hover {
-        opacity: 0.5;
+        .op_trans;
         cursor: pointer;
-        transition: all 0.3s ease 0s;
       }
 
       @media screen and (max-width: 770px) {
         text-align: right;
       }
     }
-  }
 
-  &__projectsList {
-    #flex > .df;
-    box-sizing: border-box;
-    overflow-y: auto;
+    &__projectsList {
+      #flex > .df;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
   }
 }
-
-
-
 
 .timeTaskBlock {
   display: none;
