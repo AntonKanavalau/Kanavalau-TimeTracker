@@ -1,8 +1,11 @@
 // Close form window
-const btnClose = document.querySelectorAll('.close');
-btnClose.forEach(button => {
-  button.addEventListener('click', () => {
-    formOpen.classList.remove('open');
-    FormElement.reset();
+
+let AddForm = document.querySelectorAll('.addForm');
+AddForm.forEach(btnClose => {
+  btnClose.addEventListener('click', e => {
+    let target = e.target;
+    if (target.closest('.close')) {
+      btnClose.classList.remove('open');
+    }
   })
-})
+});

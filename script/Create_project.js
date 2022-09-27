@@ -1,13 +1,13 @@
 // Open form add project into dashboard
-const btnOpenWindow = document.querySelector('.newProject_add');
-const formOpen = document.querySelector('.addForm');
+let btnOpenWindowProject = document.querySelector('.newProject_add');
+let ProjectFormOpen = document.querySelector('.addForm');
 
-btnOpenWindow.addEventListener('click', () => {
-  formOpen.classList.add('open');
+btnOpenWindowProject.addEventListener('click', () => {
+  ProjectFormOpen.classList.add('open');
 })
 
 //Get inputData add project
-const FormElement = document.forms['addProject'];
+let FormElement = document.forms['addProject'];
 FormElement.onsubmit = ValidateInfoForm;
 
 function ValidateInfoForm() {
@@ -49,17 +49,25 @@ function ValidateInfoForm() {
 
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
-  formOpen.classList.remove('open');
+  ProjectFormOpen.classList.remove('open');
 }
 
-//Delete project
+
 const dashboardProjects = document.querySelector('.dashboard__projectsList');
-let projectSection = document.querySelectorAll('.project-task');
 dashboardProjects.addEventListener('click', function (e) {
-  let targetItem = e.target;
-  if (targetItem.closest('.delete_btn')) {
-    targetItem.closest('.projectTime').parentNode.remove(projectSection);
+  let target = e.target;
+  //Delete project
+  if (target.closest('.delete_btn')) {
+    target.closest('.projectTime').parentNode.remove('projectSection');
+    return false;
+  }
+  if (target.closest('.section')) {
+    let timeTaskBlock = document.querySelector('.timeTaskBlock');
+    timeTaskBlock.setAttribute('class', 'open');
+
+console.log(target);
   }
 })
+
 
 
