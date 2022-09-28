@@ -61,18 +61,21 @@ const ColorForm = document.querySelector(".addForm--color");
 let ColorBlock = document.querySelectorAll('.colorBlock');
 const tableBody = document.querySelector('.table__body');
 let colorValue;
+let tableColorBlock;
 
 tableBody.addEventListener('click', (e) => {
-  let target = e.target;
+  tableColorBlock = e.target;
 
-  if (target.closest('.color')) {
+  if (tableColorBlock.closest('.color')) {
     ColorForm.classList.add('open');
   }
+  console.log(tableColorBlock);
 });
 
 
 ColorForm.addEventListener('click', (e) => {
   let target = e.target;
+
   if (target.closest('.colorBlock')) {
     ColorBlock.forEach(elem => elem.classList.remove('box-shadow'));
     target.classList.add('box-shadow');
@@ -80,39 +83,12 @@ ColorForm.addEventListener('click', (e) => {
   }
   //Change color
   if (target.closest('.create')) {
-    colorValue.getAttribute('class');
     colorValue.classList.remove('box-shadow');
-
+    tableColorBlock.classList.remove('colorBlock', 'colorBlock--red');
+    
+    let classValue = colorValue.getAttribute('class');
+    tableColorBlock.setAttribute('class', classValue);
     ColorForm.classList.remove('open');
-    console.log(colorValue);
+    console.log(classValue);
   }
 })
-
-/*
-const dtnApply = document.querySelector('.create');
-dtnApply.addEventListener('click', () => {
-  colorValue.getAttribute('class');
-  console.log(colorValue);
-})*/
-
-
-//Change color
-/*ColorBlock.forEach(color => {
-  color.addEventListener('click', () => {
-    ColorBlock.forEach(elem => elem.classList.remove('box-shadow'));
-    color.classList.add('box-shadow');
-  })
-})*/
-
-/*let coloValue = color;
-const apllyBtn = document.querySelector('.create')*/
-
-
-/*
-formColor.addEventListener('click', (e) => {
-  let target = e.target;
-  if (target.closest('.colorBlock')) {
-    target.classList.add('box--shadow');
-    console.log(target);
-  }
-})*/
