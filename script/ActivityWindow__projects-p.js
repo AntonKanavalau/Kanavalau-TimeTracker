@@ -58,21 +58,61 @@ function ValidateInfoForm() {
 
 //Open window change color
 const ColorForm = document.querySelector(".addForm--color");
+let ColorBlock = document.querySelectorAll('.colorBlock');
 const tableBody = document.querySelector('.table__body');
+let colorValue;
+
 tableBody.addEventListener('click', (e) => {
   let target = e.target;
+
   if (target.closest('.color')) {
     ColorForm.classList.add('open');
   }
+});
+
+
+ColorForm.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target.closest('.colorBlock')) {
+    ColorBlock.forEach(elem => elem.classList.remove('box-shadow'));
+    target.classList.add('box-shadow');
+    colorValue = target;
+  }
+  //Change color
+  if (target.closest('.create')) {
+    colorValue.getAttribute('class');
+    colorValue.classList.remove('box-shadow');
+
+    ColorForm.classList.remove('open');
+    console.log(colorValue);
+  }
 })
 
+/*
+const dtnApply = document.querySelector('.create');
+dtnApply.addEventListener('click', () => {
+  colorValue.getAttribute('class');
+  console.log(colorValue);
+})*/
 
 
-// Close form window
-/*const btnClose = document.querySelectorAll('.close');
-btnClose.forEach(button => {
-  button.addEventListener('click', () => {
-    ColorForm.classList.remove('open');
-    FormElement.reset();
+//Change color
+/*ColorBlock.forEach(color => {
+  color.addEventListener('click', () => {
+    ColorBlock.forEach(elem => elem.classList.remove('box-shadow'));
+    color.classList.add('box-shadow');
   })
+})*/
+
+/*let coloValue = color;
+const apllyBtn = document.querySelector('.create')*/
+
+
+/*
+formColor.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target.closest('.colorBlock')) {
+    target.classList.add('box--shadow');
+    console.log(target);
+  }
 })*/
