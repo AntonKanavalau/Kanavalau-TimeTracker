@@ -1,8 +1,7 @@
 // Open form add task into dashboard
-var sectionBlock;
+let sectionBlock;
 
 window.addEventListener('load', initDrawers);
-
 function initDrawers() {
   // Get the containing elements
   sectionBlock = document.querySelectorAll('.section')
@@ -21,9 +20,6 @@ function setHeights() {
     }, 0);
   });
 }
-
-
-
 
 //Get inputData add project
 /*

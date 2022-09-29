@@ -1,43 +1,43 @@
 /*Timer*/
 //Timer fields
-var hourElement = document.querySelector('.hours-1');
-var minuteElement = document.querySelector('.minutes-1');
-var secondElement = document.querySelector('.seconds-1');
+let hourElement = document.querySelector('.hours-1');
+let minuteElement = document.querySelector('.minutes-1');
+let secondElement = document.querySelector('.seconds-1');
 
 
-var hourElement2 = document.querySelector('.hours-2');
-var minuteElement2 = document.querySelector('.minutes-2');
-var secondElement2 = document.querySelector('.seconds-2');
-var i;
+let hourElement2 = document.querySelector('.hours-2');
+let minuteElement2 = document.querySelector('.minutes-2');
+let secondElement2 = document.querySelector('.seconds-2');
+let i;
 
 
 // Project total time
-var TPhoursElement = document.querySelector('.TPhours');
-var TPminutesElement = document.querySelector('.TPminutes');
-var TPsecondsElement = document.querySelector('.TPseconds');
+let TPhoursElement = document.querySelector('.TPhours');
+let TPminutesElement = document.querySelector('.TPminutes');
+let TPsecondsElement = document.querySelector('.TPseconds');
 
 TPhoursElement = hourElement;
 TPminutesElement = minuteElement;
 TPsecondsElement = secondElement;
 
 //Total time
-var ThoursElement = document.querySelector('.Thours');
-var TminutesElement = document.querySelector('.Tminutes');
-var TsecondsElement = document.querySelector('.Tseconds');
+let ThoursElement = document.querySelector('.Thours');
+let TminutesElement = document.querySelector('.Tminutes');
+let TsecondsElement = document.querySelector('.Tseconds');
 
 //Buttons
-var playTime = document.querySelector('.play-time');
-var playIcon = document.getElementById('play');
+let playTime = document.querySelector('.play-time');
+let playIcon = document.getElementById('play');
 
 
 playTime.addEventListener('click', startTimer);
 
 //Variables
-var hour = 00;
-var minute = 00;
-var second = 00;
-var millisecond = 00;
-var interval;
+let hour = 00;
+let minute = 00;
+let second = 00;
+let millisecond = 00;
+let interval;
 
 
 function startTimer() {

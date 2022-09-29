@@ -1,6 +1,4 @@
 let containers;
-
-
 window.addEventListener('click', initDrawers);
 
 function initDrawers() {

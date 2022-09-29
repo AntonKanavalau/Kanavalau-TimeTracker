@@ -45,21 +45,21 @@
               <thead class="table__head">
                 <tr>
                   <th class="id">#</th>
-                  <th class="project_name">name</th>
-                  <th class="position">position</th>
-                  <th class="e-mail">e-mail</th>
-                  <th class="phone">phone</th>
-                  <th class="date">date of birth</th>
+                  <th>name</th>
+                  <th>position</th>
+                  <th>e-mail</th>
+                  <th>phone</th>
+                  <th>date of birth</th>
                 </tr>
               </thead>
               <tbody class="table__body">
                 <tr class="projects_list">
                   <td class="id">1</td>
-                  <td class="project_name">name</td>
-                  <td class="position">position</td>
-                  <td class="e-mail"><input type="email" name="email" placeholder="e-Mail (optionl)"></td>
-                  <td class="phone"><input type="text" placeholder="Phone (optionl)"></td>
-                  <td class="date"><input type="date" placeholder="Birth data (optionl)"></td>
+                  <td>name</td>
+                  <td>position</td>
+                  <td><input type="email" name="email" placeholder="e-Mail (optionl)"></td>
+                  <td><input type="text" name="phone" placeholder="Phone (optionl)"></td>
+                  <td><input type="date" name="birth" placeholder="Birth data (optionl)"></td>
                 </tr>
               </tbody>
             </table>
@@ -70,7 +70,7 @@
     <div class="addForm">
       <div class="form_block">
         <section class="title">
-          <p>creating new project</p>
+          <p>creating new team</p>
           <i class="material-icons close">close</i>
         </section>
         <section class="form">
@@ -81,9 +81,6 @@
             <label>
               <input class="data" type="text" name="position" placeholder="Position">
             </label>
-            <label>
-              <input class="data" type="text" name="eMail" placeholder="e-Mail">
-            </label>
             <div class="form__button">
               <button class="Button_base decline close" type="button">decline</button>
               <button class="Button_base create">apply</button>
@@ -92,7 +89,8 @@
         </section>
       </div>
     </div>
-    <script src="../script/ActivityWindow__team-p.js"></script>
+    <script src="../script/Open_formWindow.js"></script>
+    <script src="../script/formAddTeam__team-p.js"></script>
     <script src="../script/Close_formWindow.js"></script>
   </body>
 </html>

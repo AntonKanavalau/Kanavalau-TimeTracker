@@ -1,13 +1,3 @@
-let i;
-
-//Open windows create new projects (home pages)
-const newProjectAdd = document.querySelector(".btnAddProject");
-const openForm = document.querySelector(".addForm");
-newProjectAdd.addEventListener('click', function () {
-  openForm.classList.add('open');
-  FormElement.reset();
-});
-
 //Get inputData add project
 let FormElement = document.forms['addProject'];
 FormElement.onsubmit = ValidateInfoForm;
@@ -72,7 +62,6 @@ tableBody.addEventListener('click', (e) => {
   console.log(tableColorBlock);
 });
 
-
 ColorForm.addEventListener('click', (e) => {
   let target = e.target;
 
@@ -85,7 +74,7 @@ ColorForm.addEventListener('click', (e) => {
   if (target.closest('.create')) {
     colorValue.classList.remove('box-shadow');
     tableColorBlock.classList.remove('colorBlock', 'colorBlock--red');
-    
+
     let classValue = colorValue.getAttribute('class');
     tableColorBlock.setAttribute('class', classValue);
     ColorForm.classList.remove('open');

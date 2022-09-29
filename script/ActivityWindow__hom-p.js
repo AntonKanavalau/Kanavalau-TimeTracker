@@ -1,30 +1,3 @@
-var i;
-
-/*Open task window into timeProject_container*/
-var projectTime = document.querySelectorAll('.list');
-var taskBlock = document.querySelector('.timeTaskBlock')
-for (i = 0; i < projectTime.length; i++) {
-  projectTime[i].addEventListener('click', function () {
-    taskBlock.classList.toggle('open');
-  });
-}
-
-/*Open windows create new projects (home pages)*/
-var newProjectAdd = document.querySelector(".newProject_add");
-var openForm = document.querySelector(".addForm");
-newProjectAdd.addEventListener('click', function () {
-  openForm.classList.add('open');
-});
-
-/*Open task window into dashboard_projects*/
-var projectBlockContainer = document.querySelectorAll('.projectTime--header');
-var DPtaskBlock = document.getElementById('DP_taskBlock_1');
-for (i = 0; i < projectBlockContainer.length; i++) {
-  projectBlockContainer[i].addEventListener('click', function () {
-    DPtaskBlock.classList.toggle('open');
-  });
-}
-
 /*Open window create new task*/
 var addTask = document.querySelector(".timeTaskBlock__addTask");
 var addTaskForm = document.querySelector(".addForm--task");
@@ -32,16 +5,6 @@ addTask.addEventListener('click', function () {
   addTaskForm.classList.add('open');
   FormElement.reset();
 });
-
-/*Close window creates*/
-var close = document.querySelectorAll(".close");
-for (i = 0; i < close.length; i++) {
-  close[i].addEventListener('click', function () {
-    openForm.classList.remove('open');
-    addTaskForm.classList.remove('open');
-    FormElement.reset();
-  });
-}
 
 /*Get task title data*/
 var taskInput1 = document.getElementById('task_1');

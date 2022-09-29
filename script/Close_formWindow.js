@@ -1,5 +1,4 @@
 // Close form window
-
 let AddForm = document.querySelectorAll('.addForm');
 AddForm.forEach(btnClose => {
   btnClose.addEventListener('click', e => {
