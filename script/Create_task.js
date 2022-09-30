@@ -1,28 +1,9 @@
-// Open form add task into dashboard
-let sectionBlock;
-
-window.addEventListener('load', initDrawers);
-function initDrawers() {
-  // Get the containing elements
-  sectionBlock = document.querySelectorAll('.section')
-  setHeights();
-  wireUpTriggers();
-  window.addEventListener("resize", setHeights);
-}
-
-function setHeights() {
-  sectionBlock.forEach(section => {
-    // Get content
-    let timeTaskBlock = section.querySelector('.timeTaskBlock');
-    setTimeout(e => {
-      section.classList.add("height-is-set");
-      timeTaskBlock.setAttribute("aria-hidden", "true");
-    }, 0);
-  });
-}
-
 //Get inputData add project
-/*
+/*let projectTimeHeader = document.querySelectorAll('.projectTime--header');
+projectTimeHeader.forEach()*/
+
+
+let TaskFormOpen = document.querySelector('.addForm--task');
 FormElement.onsubmit = ValidateInfoForm;
 
 function ValidateInfoForm() {
@@ -32,17 +13,15 @@ function ValidateInfoForm() {
 
   let NameTaskValue = NameTaskElement.value;
 
-
   if (NameTaskValue.length === 0) {
     alert('Please fill Name task');
     NameTaskElement.focus();
     return false;
   }
 
-
   let html = `
       <article class="timeTaskBlock__task">
-        <input id="task_2" value="Task_2">
+        <input value="${NameTaskValue}">
         <section>
           <p class="task-time"><span class="hours">00</span>:
                                <span class="minutes">00</span>:
@@ -52,8 +31,9 @@ function ValidateInfoForm() {
         </section>
       </article>
   `;
+
   const timeTaskBlock = document.querySelector('.timeTaskBlock');
   timeTaskBlock.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
-  formOpen.classList.remove('open');
-}*/
+  TaskFormOpen.classList.remove('open');
+}

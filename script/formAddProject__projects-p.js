@@ -78,6 +78,5 @@ ColorForm.addEventListener('click', (e) => {
     let classValue = colorValue.getAttribute('class');
     tableColorBlock.setAttribute('class', classValue);
     ColorForm.classList.remove('open');
-    console.log(classValue);
   }
 })

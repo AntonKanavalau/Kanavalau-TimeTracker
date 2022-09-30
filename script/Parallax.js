@@ -1,7 +1,7 @@
 "use strict"
 //Parallax
 window.onload = function () {
-  var parallax = document.querySelector('.parallax');
+  const parallax = document.querySelector('.parallax');
   if (parallax) {
     let background = document.querySelector('.images-parallax__background');
     let items = document.querySelector('.images-parallax__items');

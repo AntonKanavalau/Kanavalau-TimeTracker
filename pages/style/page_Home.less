@@ -49,7 +49,6 @@
   }
 
   /*Total time block*/
-
   &__totalTime {
     width: 60%;
     font-size: 2.5rem;
@@ -65,6 +64,7 @@
     @media screen and (max-width: 670px) {
       width: auto;
       #flex > .da_sf_rj_a;
+      padding: 0.2rem 0;
       font-size: 1.5em;
     }
 
@@ -74,13 +74,16 @@
   }
 
   /*Total time project and task*/
-
   &__ProjectBlock {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem 1rem 2rem;
     flex-direction: column;
     overflow-y: auto;
+
+    @media screen and (max-width: 670px) {
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -132,7 +135,7 @@
       color: #009a00;
     }
 
-    [data-drawer-showing="true"] &:before {
+    [Arrow="true"] &:before {
       content: "\e5c5";
       font-family: 'Material Icons';
       color: #009a00;
@@ -142,6 +145,10 @@
   &--header {
     padding: 1rem 0;
     border-bottom: none;
+
+    &[Arrow="true"] {
+      border-bottom: 1px solid fade(@custBlue, 80%);
+    }
   }
 }
 
@@ -187,10 +194,6 @@
     overflow-y: auto;
   }
 }
-
-/*.timeTaskBlock[aria-hidden="true"] {
-  display: none;
-}*/
 
 .timeTaskBlock {
   display: none;

@@ -1,9 +1,40 @@
-// Open form add project into dashboard
-let btnOpenWindowProject = document.querySelector('.newProject_add');
 let ProjectFormOpen = document.querySelector('.addForm');
 
-btnOpenWindowProject.addEventListener('click', () => {
-  ProjectFormOpen.classList.add('open');
+//Activity
+window.addEventListener('click', function (e) {
+  let target = e.target;
+
+  // Open form add project into dashboard
+  if (target.closest('.newProject_add')) {
+    ProjectFormOpen.classList.add('open');
+  }
+
+  //Delete project
+  if (target.closest('.delete_btn')) {
+    target.closest('.projectTime').parentNode.remove('projectSection');
+    return false;
+  }
+
+  //Open task block
+  if (target.closest('.section') || target.closest('.projectTime')) {
+
+    let section = target.parentNode;
+    let timeTaskBlock = section.childNodes[3];
+    timeTaskBlock.classList.toggle('open');
+
+    //Change arrow
+    target.setAttribute("Arrow",
+      target.getAttribute("Arrow") === "true" ? "false" : "true");
+
+    console.log(target);
+    console.log(section);
+  }
+
+  // Open form add task into project dashboard
+  if (target.closest('.timeTaskBlock__addTask')) {
+    let TaskFormOpen = document.querySelector('.addForm--task');
+    TaskFormOpen.classList.add('open');
+  }
 })
 
 //Get inputData add project
@@ -46,33 +77,9 @@ function ValidateInfoForm() {
         </div>
       </div>
   `;
-
+  const dashboardProjects = document.querySelector('.dashboard__projectsList');
   dashboardProjects.insertAdjacentHTML('beforeend', html);
   FormElement.reset();
   ProjectFormOpen.classList.remove('open');
 }
-
-
-const dashboardProjects = document.querySelector('.dashboard__projectsList');
-dashboardProjects.addEventListener('click', function (e) {
-  let target = e.target;
-  //Delete project
-  if (target.closest('.delete_btn')) {
-    target.closest('.projectTime').parentNode.remove('projectSection');
-    return false;
-  }
-  //Open task block
-  if (target.closest('.section')) {
-    let section = target.parentNode;
-    let timeTaskBlock = section.childNodes[3];
-    timeTaskBlock.classList.toggle('open');
-
-
-    console.log(target);
-    console.log(section);
-    console.log(timeTaskBlock);
-  }
-})
-
-
 
