@@ -11,14 +11,14 @@ function ValidateInfoForm() {
   let NameProjectValue = NameProjectElement.value;
   let CompanyNameValue = CompanyNameElement.value;
 
-  if (NameProjectValue.length === 0) {
-    alert('Please fill Name Project');
-    NameProjectElement.focus();
+  if (CompanyNameValue.length === 0) {
+    alert('Please fill Customer name');
+    CompanyNameElement.focus();
     return false;
   }
-  if (CompanyNameValue.length === 0) {
-    alert('Please fill Customer');
-    CompanyNameElement.focus();
+  if (NameProjectValue.length === 0) {
+    alert('Please fill Name Project name');
+    NameProjectElement.focus();
     return false;
   }
 

@@ -61,11 +61,16 @@ dashboardProjects.addEventListener('click', function (e) {
     target.closest('.projectTime').parentNode.remove('projectSection');
     return false;
   }
+  //Open task block
   if (target.closest('.section')) {
-    let timeTaskBlock = document.querySelector('.timeTaskBlock');
-    timeTaskBlock.setAttribute('class', 'open');
+    let section = target.parentNode;
+    let timeTaskBlock = section.childNodes[3];
+    timeTaskBlock.classList.toggle('open');
 
-console.log(target);
+
+    console.log(target);
+    console.log(section);
+    console.log(timeTaskBlock);
   }
 })
 
