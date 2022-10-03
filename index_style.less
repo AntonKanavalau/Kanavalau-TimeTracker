@@ -9,6 +9,11 @@ body {
   background: #f0f3f8;
   font-family: 'Manrope', sans-serif;
 
+  @media screen and (min-width: 2000px) {
+    width: 50vw;
+    margin-left: 25%;
+  }
+
   @media screen and (max-width: 1280px) {
     background-image: none;
   }
@@ -74,6 +79,7 @@ main {
   &__background {
     .prlxPos;
     background: url("images/background-01.svg") @BGalign;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
     background-size: 35em;
     top: 0;
   }
@@ -81,6 +87,7 @@ main {
   &__items {
     .prlxPos;
     background: url("images/items-01.svg") @BGalign;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     background-size: 35em;
     z-index: 2;
   }
@@ -88,6 +95,7 @@ main {
   &__people {
     .prlxPos;
     background: url("images/people-01.svg") @BGalign;
+    filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.15));
     background-size: 35em;
     z-index: 3;
   }
@@ -148,6 +156,7 @@ input.data {
   background: #fff;
   border: 1px solid #e3e6e8ff;
   border-radius: 5px;
+  caret-color: @custBlue;
   .transition;
 
   &:hover {

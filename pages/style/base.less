@@ -21,7 +21,6 @@ body {
       width: 50vw;
       margin-left: 25%;
   }
-
 }
 
 main {
@@ -80,6 +79,7 @@ i {
 
 input {
   width: 100%;
+  caret-color: @custBlue;
 }
 
 input::-webkit-input-placeholder {
@@ -96,7 +96,7 @@ input::-moz-placeholder {
   padding: 0.65rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, rgb(33, 150, 243) 0%, rgb(86, 204, 242) 103.52%);
+  background: linear-gradient(90deg, @custBlue 0%, rgb(86, 204, 242) 103.52%);
   box-shadow: 0 2px 2px rgba(68, 68, 68, 0.51);
   border-radius: 20px;
   border: none;
@@ -189,7 +189,7 @@ input::-moz-placeholder {
         margin: 0;
         padding-right: 1.5rem;
         font-size: 3rem;
-        color: #2195f2;
+        color: @custBlue;
       }
     }
   }
