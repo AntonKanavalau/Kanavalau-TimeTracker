@@ -1,15 +1,3 @@
-//Get task title data
-/*var taskInput1 = document.getElementById('task_1');
-var taskInput2 = document.getElementById('task_2');
-var taskTitle1 = document.querySelector('.task_1');
-var taskTitle2 = document.querySelector('.task_2');
-var taskTitle = document.querySelector('.content__header--task-title');
-
-taskInput1.oninput = function () {
-  taskTitle1.innerHTML = taskInput1.value;
-  taskTitle.innerHTML = taskInput1.value;
-};*/
-
 let ProjectFormOpen = document.querySelector('.addForm');
 
 // Listen tracker
