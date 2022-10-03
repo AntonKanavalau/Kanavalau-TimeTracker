@@ -70,6 +70,7 @@ ColorForm.addEventListener('click', (e) => {
     target.classList.add('box-shadow');
     colorValue = target;
   }
+
   //Change color
   if (target.closest('.create')) {
     colorValue.classList.remove('box-shadow');

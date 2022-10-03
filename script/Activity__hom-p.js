@@ -13,6 +13,7 @@ trackerProjectBlock.addEventListener('click', (event) => {
 const dashboardProjectsList = document.querySelector('.dashboard__projectsList');
 dashboardProjectsList.addEventListener('click', (event) => {
   let target = event.target;
+
   //Delete project
   if (target.closest('.delete_btn')) {
     target.closest('.projectTime').parentNode.remove('projectSection');
