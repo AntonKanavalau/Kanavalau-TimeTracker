@@ -9,7 +9,13 @@ block.classList.add('notification');
 
   notificationBlock.appendChild(block);
 
-  closeForm ();
+  // Close form window
+  let AddForm = document.querySelectorAll('.addForm');
+  AddForm.forEach(btnClose => {
+    btnClose.addEventListener('click', e => {
+        btnClose.classList.remove('open');
+    })
+  });
 
   //Close notification
   setTimeout(() => {
