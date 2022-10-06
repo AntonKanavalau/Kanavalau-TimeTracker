@@ -94,3 +94,7 @@ function ValidateInfoForm() {
   FormElement.reset();
   ProjectFormOpen.classList.remove('open');
 }
+
+//Task button into header
+const btnTask = document.getElementById('btnTask');
+btnTask.addEventListener('click', createNotification);
