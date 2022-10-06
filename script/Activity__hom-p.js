@@ -41,6 +41,7 @@ function openTaskBlock (event) {
   //Change arrow
   target.setAttribute("Arrow",
     target.getAttribute("Arrow") === "true" ? "false" : "true");
+
 }
 
 // Open form add project into dashboard
@@ -98,3 +99,12 @@ function ValidateInfoForm() {
 //Task button into header
 const btnTask = document.getElementById('btnTask');
 btnTask.addEventListener('click', createNotification);
+
+//Change task name
+const taskName1 = document.getElementById('taskName1');
+let taskTitle = document. querySelectorAll('.task_1');
+taskName1.oninput = function () {
+  taskTitle.forEach( change => {
+    change.innerHTML = taskName1.value;
+  })
+}

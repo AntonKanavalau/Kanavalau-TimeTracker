@@ -10,16 +10,26 @@
     background: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 
+    section:first-child {
+      justify-content: flex-start;
+      .textOverflow;
+    }
+
+    section:last-child{
+      justify-content: flex-end;
+    }
+
     p {
       .textOverflow;
     }
 
     & > * {
       #flex > .da;
+      flex: 1;
     }
 
     &--project-title {
-      position: static;
+      justify-content: center;
       font-weight: bold;
       .textOverflow;
     }
